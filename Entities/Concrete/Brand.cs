@@ -5,7 +5,11 @@ using System.Text;
 
 namespace Entities.Concrete
 {
-    public class Brand : IEntity //Marka
+    public class Brand : IEntity 
     {
+        public int BrandId { get; set; }
+        public string BrandName { get; set; }
+        public string Description_1 { get; set; }
+        public string Description_2 { get; set; }
     }
 }

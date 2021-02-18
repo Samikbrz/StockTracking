@@ -9,9 +9,11 @@ namespace Entities.Concrete
     {
         public int ProductAcceptanceId { get; set; }
         public string ProductRegistaritonNumber { get; set; }
-        public DateTime AcceptanceDate { get; set; }
-        public string CompanyName { get; set; }
+        public DateTime AcceptanceDate { get; set; }       
         public string UserName { get; set; }
         public string InvoiceNo { get; set; }
+
+        public int CurrrentCompanyId { get; set; }
+        public Company Company { get; set; }
     }
 }

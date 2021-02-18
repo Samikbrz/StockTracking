@@ -11,5 +11,8 @@ namespace Entities.Concrete
         public string BrandName { get; set; }
         public string Description_1 { get; set; }
         public string Description_2 { get; set; }
+
+        public int BrandOfStockId { get; set; }
+        public Stock Stock { get; set; }
     }
 }

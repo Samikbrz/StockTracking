@@ -12,6 +12,8 @@ namespace Entities.Concrete
         public DateTime Date { get; set; }
         public decimal TotalPrice { get; set; }
         public string UserName { get; set; }
-        public string Company { get; set; }
+
+        public int CurrentCompanyId { get; set; }
+        public Company Company { get; set; }
     }
 }

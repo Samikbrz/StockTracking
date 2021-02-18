@@ -9,8 +9,9 @@ namespace Entities.Concrete
     {
         public int ProposalId { get; set; }
         public string ProposalNo { get; set; }
-        public DateTime Date { get; set; }
-        public string Company { get; set; }
+        public DateTime Date { get; set; }       
         public string UserName { get; set; }
+
+        public Company Company { get; set; }
     }
 }

@@ -10,5 +10,7 @@ namespace Entities.Concrete
         public int ShelfId { get; set; }
         public string ShelfName { get; set; }
         public string StoreName { get; set; }
+
+        public ICollection<StockStore> StockStores { get; set; }
     }
 }

@@ -10,5 +10,8 @@ namespace Entities.Concrete
         public int StoreId { get; set; }
         public int StoreName { get; set; }
         public bool IsSalesStore { get; set; }
+
+        public int StoreOfStockStoreId { get; set; }
+        public StockStore StockStore { get; set; }
     }
 }

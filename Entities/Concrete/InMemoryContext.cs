@@ -19,12 +19,12 @@ namespace Entities.Concrete
             modelBuilder.Entity<ProductAcceptance>().HasOne<Company>(s => s.Company).WithMany(q => q.ProductAcceptances).HasForeignKey(q => q.CurrrentCompanyId);
             modelBuilder.Entity<Drawer>().HasOne<Shelf>(s => s.Shelf).WithMany(q => q.Drawers).HasForeignKey(q => q.CurrentShelfId);
             modelBuilder.Entity<Shelf>().HasOne<Store>(s => s.Store).WithMany(q => q.Shelves).HasForeignKey(q => q.CurrentStoreId);
-            modelBuilder.Entity<StoreTransfer>().HasOne<Store>(s => s.StoreName).WithMany(q => q.StoreTransfers).HasForeignKey(q => q.CurrentStoreId);
-            modelBuilder.Entity<StoreTransfer>().HasOne<Drawer>(s => s.DrawerName).WithMany(q => q.StoreTransfers).HasForeignKey(q => q.CurrentDrawerId);
-            modelBuilder.Entity<StoreTransfer>().HasOne<Shelf>(s => s.ShelfName).WithMany(q => q.StoreTransfers).HasForeignKey(q => q.CurrentShelfId);
-            modelBuilder.Entity<StoreTransfer>().HasOne<Store>(s => s.TargetStore).WithMany(q => q.StoreTransfers).HasForeignKey(q => q.CurrentTargetStoreId);
-            modelBuilder.Entity<StoreTransfer>().HasOne<Drawer>(s => s.TargetDrawer).WithMany(q => q.StoreTransfers).HasForeignKey(q => q.CurrentTargetDrawerId);
-            modelBuilder.Entity<StoreTransfer>().HasOne<Shelf>(s => s.TargetShelf).WithMany(q => q.StoreTransfers).HasForeignKey(q => q.CurrentTargetShelfId);
+            modelBuilder.Entity<StoreTransfer>().HasOne<Store>(s => s.Store).WithOne(ad => ad.StoreTransfer).HasForeignKey<Store>(ad => ad.StoreOfStoreTranferId);
+            modelBuilder.Entity<StoreTransfer>().HasOne<Store>(s => s.TargetStore).WithOne(ad => ad.TargetStoreTransfer).HasForeignKey<Store>(ad => ad.TargetStoreOfStoreTranferId);
+            modelBuilder.Entity<StoreTransferDrawer>().HasKey(sd => new { sd.DrawerId, sd.StockStoreId });
+            modelBuilder.Entity<StoreTransferTargetDrawer>().HasKey(sc => new { sc.TargetDrawerId, sc.StockStoreId });
+            modelBuilder.Entity<StoreTransferShelf>().HasKey(s => new { s.ShelfId, s.StockStoreId });
+            modelBuilder.Entity<StoreTransferTargetShelf>().HasKey(sc => new { sc.TargetShelfId, sc.StockStoreId });
         }
     }
 }

@@ -17,7 +17,10 @@ namespace Entities.Concrete
         public int StoreOfStoreTranferId { get; set; }
         public StoreTransfer StoreTransfer { get; set; }
 
-        public ICollection<Shelf> Shelves { get; set; }
-        public ICollection<StoreTransfer> StoreTransfers { get; set; }
+        public int TargetStoreOfStoreTranferId { get; set; }
+        public StoreTransfer TargetStoreTransfer { get; set; }
+
+        //public ICollection<Shelf> Shelves { get; set; }
+        //public ICollection<StoreTransfer> StoreTransfers { get; set; }
     }
 }

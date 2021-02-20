@@ -13,7 +13,9 @@ namespace Entities.Concrete
         public int CurrentShelfId { get; set; }
         public Shelf Shelf { get; set; }
 
-        public ICollection<StockStore> StockStores { get; set; }
-        public ICollection<StoreTransfer> StoreTransfers { get; set; }
+        public ICollection<StockStore> StockStores { get; set; }      
+
+        public IList<StoreTransferDrawer> StoreTransferDrawers { get; set; }
+        public IList<StoreTransferTargetDrawer> StoreTransferTargetDrawers { get; set; }
     }
 }

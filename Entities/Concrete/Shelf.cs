@@ -15,6 +15,7 @@ namespace Entities.Concrete
 
         public ICollection<Drawer> Drawers { get; set; }
         public ICollection<StockStore> StockStores { get; set; }
-        public ICollection<StoreTransfer> StoreTransfers { get; set; }
+        public IList<StoreTransferShelf> StoreTransferShelves { get; set; }
+        public IList<StoreTransferTargetShelf> StoreTransferTargetShelves { get; set; }
     }
 }

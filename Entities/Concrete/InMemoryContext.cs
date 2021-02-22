@@ -9,8 +9,8 @@ namespace Entities.Concrete
     {
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Stock>().HasOne<Brand>(s => s.Brand).WithOne(q => q.Stock).HasForeignKey<Brand>(q => q.BrandOfStockId);
-            modelBuilder.Entity<Stock>().HasOne<Model>(s => s.Model).WithOne(q => q.Stock).HasForeignKey<Model>(q => q.ModelOfStockId);
+            modelBuilder.Entity<Brand>().HasOne<Stock>(s => s.Stock).WithMany(q => q.Brands).HasForeignKey(q => q.BrandOfStockId);
+            modelBuilder.Entity<Model>().HasOne<Stock>(s => s.Stock).WithMany(q => q.Models).HasForeignKey(q => q.ModelOfStockId);
             modelBuilder.Entity<StockStore>().HasOne<Drawer>(s => s.Drawer).WithMany(q => q.StockStores).HasForeignKey(q => q.CurrentDrawerId);
             modelBuilder.Entity<StockStore>().HasOne<Shelf>(s => s.Shelf).WithMany(q => q.StockStores).HasForeignKey(q => q.CurrentShelfId);
             modelBuilder.Entity<StockStore>().HasOne<Store>(s => s.Store).WithOne(q => q.StockStore).HasForeignKey<Store>(q => q.StoreOfStockStoreId);

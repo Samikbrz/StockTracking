@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -15,8 +16,9 @@ namespace DataAccess.Concrete.InMemory
         {
             _productUnits = new List<ProductUnit>
             {
-                new ProductUnit{ProductUnitId=1,ProductUnitName="Kutu"},
-                new ProductUnit{ProductUnitId=1,ProductUnitName="Şişe"}
+                new ProductUnit{ProductUnitId=1, ProductUnitName="Şişe" },
+                new ProductUnit{ProductUnitId=1, ProductUnitName="Kutu" },
+                new ProductUnit{ProductUnitId=1, ProductUnitName="Kova"}
             };
         }
         public void Add(ProductUnit entity)

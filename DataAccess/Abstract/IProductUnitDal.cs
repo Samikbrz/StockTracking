@@ -8,5 +8,6 @@ namespace DataAccess.Abstract
 {
     public interface IProductUnitDal : IEntityRepository<ProductUnit>
     {
+
     }
 }

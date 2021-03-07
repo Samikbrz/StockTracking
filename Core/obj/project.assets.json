@@ -307,19 +307,6 @@
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
-      },
-      "Entities/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "3.1.12"
-        },
-        "compile": {
-          "bin/placeholder/Entities.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entities.dll": {}
-        }
       }
     }
   },
@@ -1043,16 +1030,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
-    },
-    "Entities/1.0.0": {
-      "type": "project",
-      "path": "../Entities/Entities.csproj",
-      "msbuildProject": "../Entities/Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Entities >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 3.1.12",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -1082,11 +1064,7 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {
-            "C:\\Users\\samet\\source\\repos\\StockTracking\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Entities\\Entities.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -1099,6 +1077,10 @@
       "netstandard2.0": {
         "targetAlias": "netstandard2.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[3.1.12, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",

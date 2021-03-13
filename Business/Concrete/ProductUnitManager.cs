@@ -1,4 +1,6 @@
 ﻿using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -14,24 +16,35 @@ namespace Business.Concrete
         {
             productUnitDal = _productUnitDal;
         }
-        public void Add(ProductUnit productUnit)
+        public IResult Add(ProductUnit productUnit)
         {
-            _productUnitDal.Add(productUnit);
+            if (productUnit.ProductUnitName.Length>2)
+            {
+                _productUnitDal.Add(productUnit);
+                return new SuccessResult(Messages.ProductUnitAdded);
+            }
+            return new ErrorResult(Messages.ProductUnitNameInvalid);
         }
 
-        public void Delete(ProductUnit productUnit)
+        public IResult Delete(ProductUnit productUnit)
         {
             _productUnitDal.Delete(productUnit);
+            return new SuccessResult("Deleted product unit");
         }
 
-        public List<ProductUnit> GetAll()
+        public IDataResult<List<ProductUnit>> GetAll()
         {
-            return _productUnitDal.GetAll();
+            if (DateTime.Now.Hour == 2)
+            {
+                return new ErrorDataResult<List<ProductUnit>>(Messages.MaintenaceTime);
+            }
+            return new SuccessDataResult<List<ProductUnit>>(_productUnitDal.GetAll(), Messages.ProductUnitsListed);
         }
 
-        public void Update(ProductUnit productUnit)
+        public IResult Update(ProductUnit productUnit)
         {
             _productUnitDal.Update(productUnit);
+            return new SuccessResult("Updated product unit");
         }
     }
 }

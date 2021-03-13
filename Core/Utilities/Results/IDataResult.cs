@@ -4,9 +4,8 @@ using System.Text;
 
 namespace Core.Utilities.Results
 {
-    public interface IResult
+    public interface IDataResult<T>
     {
-        bool Success { get; }
-        string Message { get; }
+        T Data { get; }
     }
 }

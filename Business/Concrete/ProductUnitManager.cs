@@ -36,7 +36,7 @@ namespace Business.Concrete
         {
             if (DateTime.Now.Hour == 2)
             {
-                return new ErrorDataResult<List<ProductUnit>>(Messages.MaintenaceTime);
+                return new ErrorDataResult<List<ProductUnit>>(Messages.MaintenanceTime);
             }
             return new SuccessDataResult<List<ProductUnit>>(_productUnitDal.GetAll(), Messages.ProductUnitsListed);
         }

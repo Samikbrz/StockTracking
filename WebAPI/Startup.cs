@@ -1,3 +1,7 @@
+using Business.Abstract;
+using Business.Concrete;
+using DataAccess.Abstract;
+using DataAccess.Concrete.InMemory;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

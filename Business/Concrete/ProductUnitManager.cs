@@ -12,9 +12,10 @@ namespace Business.Concrete
     public class ProductUnitManager : IProductUnitService
     {
         IProductUnitDal _productUnitDal;
+
         public ProductUnitManager(IProductUnitDal productUnitDal)
         {
-            productUnitDal = _productUnitDal;
+            _productUnitDal = productUnitDal;
         }
         public IResult Add(ProductUnit productUnit)
         {

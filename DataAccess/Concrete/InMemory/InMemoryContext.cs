@@ -10,6 +10,7 @@ namespace Entities.Concrete
         List<ProductUnit> _productUnits;
         public InMemoryContext()
         {
+            
             _productUnits = new List<ProductUnit>
             {
                 new ProductUnit{ProductUnitId=1, ProductUnitName="Şişe" },
@@ -37,6 +38,8 @@ namespace Entities.Concrete
             modelBuilder.Entity<StoreTransferTargetShelf>().HasKey(sc => new { sc.TargetShelfId, sc.StockStoreId });
         }       
 
-        public DbSet<ProductUnit> productUnits { get; set; }
+        public DbSet<ProductUnit> productUnits { get; set; }   
+        
+        
     }
 }

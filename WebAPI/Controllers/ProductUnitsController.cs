@@ -21,6 +21,17 @@ namespace WebAPI.Controllers
             _productUnitService = productUnitService;
         }
 
+        [HttpPost]
+        public IActionResult Post()
+        {
+            var result = _productUnitService.Add(new ProductUnit() { ProductUnitId = 3, ProductUnitName = "Dom domb kurşunu" });
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest();
+        }
+
         [HttpGet]
         public IActionResult Get()
         {           

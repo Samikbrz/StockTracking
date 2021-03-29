@@ -1,38 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\samet\\source\\repos\\StockTracking\\Business\\Business.csproj": {}
+    "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Business\\Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\samet\\source\\repos\\StockTracking\\Business\\Business.csproj": {
+    "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samet\\source\\repos\\StockTracking\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Business\\obj\\",
+        "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\Kerem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kerem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\samet\\source\\repos\\StockTracking\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\samet\\source\\repos\\StockTracking\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Entities\\Entities.csproj"
+              "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Entities\\Entities.csproj"
               }
             }
           }
@@ -44,8 +44,8 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Autofac": {
               "target": "Package",
@@ -54,12 +54,6 @@
             "Autofac.Extras.DynamicProxy": {
               "target": "Package",
               "version": "[6.0.0, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
             }
           },
           "imports": [
@@ -72,33 +66,38 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\Core.csproj": {
+    "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\obj\\",
+        "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\Kerem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kerem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -109,18 +108,12 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.12, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
             }
           },
           "imports": [
@@ -133,39 +126,44 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\samet\\source\\repos\\StockTracking\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samet\\source\\repos\\StockTracking\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Kerem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kerem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\Core.csproj"
+              "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\Core.csproj"
               },
-              "C:\\Users\\samet\\source\\repos\\StockTracking\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Entities\\Entities.csproj"
+              "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Entities\\Entities.csproj"
               }
             }
           }
@@ -177,14 +175,12 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
+              "version": "[3.1.13, )"
             }
           },
           "imports": [
@@ -197,36 +193,41 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\samet\\source\\repos\\StockTracking\\Entities\\Entities.csproj": {
+    "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\samet\\source\\repos\\StockTracking\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Kerem\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kerem\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\Core.csproj"
+              "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\Core.csproj"
               }
             }
           }
@@ -238,18 +239,12 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.12, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
             }
           },
           "imports": [
@@ -262,7 +257,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

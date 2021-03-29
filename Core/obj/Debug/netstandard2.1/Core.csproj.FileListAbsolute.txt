@@ -1,0 +1,9 @@
+C:\Users\Kerem\Source\Repos\StockTracking\Core\bin\Debug\netstandard2.1\Core.deps.json
+C:\Users\Kerem\Source\Repos\StockTracking\Core\bin\Debug\netstandard2.1\Core.dll
+C:\Users\Kerem\Source\Repos\StockTracking\Core\bin\Debug\netstandard2.1\Core.pdb
+C:\Users\Kerem\Source\Repos\StockTracking\Core\obj\Debug\netstandard2.1\Core.csprojAssemblyReference.cache
+C:\Users\Kerem\Source\Repos\StockTracking\Core\obj\Debug\netstandard2.1\Core.AssemblyInfoInputs.cache
+C:\Users\Kerem\Source\Repos\StockTracking\Core\obj\Debug\netstandard2.1\Core.AssemblyInfo.cs
+C:\Users\Kerem\Source\Repos\StockTracking\Core\obj\Debug\netstandard2.1\Core.csproj.CoreCompileInputs.cache
+C:\Users\Kerem\Source\Repos\StockTracking\Core\obj\Debug\netstandard2.1\Core.dll
+C:\Users\Kerem\Source\Repos\StockTracking\Core\obj\Debug\netstandard2.1\Core.pdb

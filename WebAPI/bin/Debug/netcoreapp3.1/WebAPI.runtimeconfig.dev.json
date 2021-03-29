@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Kerem\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Kerem\\.nuget\\packages"
+      "C:\\Users\\samet\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\samet\\.nuget\\packages"
     ]
   }
 }

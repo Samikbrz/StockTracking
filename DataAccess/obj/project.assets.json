@@ -934,19 +934,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kerem\\.nuget\\packages\\": {}
+    "C:\\Users\\samet\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\samet\\source\\repos\\StockTracking\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\Kerem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kerem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -960,11 +960,11 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\Core.csproj"
+            "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\Core.csproj"
             },
-            "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Entities\\Entities.csproj"
+            "C:\\Users\\samet\\source\\repos\\StockTracking\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Entities\\Entities.csproj"
             }
           }
         }
@@ -999,7 +999,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

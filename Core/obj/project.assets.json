@@ -869,19 +869,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kerem\\.nuget\\packages\\": {}
+    "C:\\Users\\samet\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\Core.csproj",
-      "packagesPath": "C:\\Users\\Kerem\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kerem\\Source\\Repos\\StockTracking\\Core\\obj\\",
+      "projectPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\Core.csproj",
+      "packagesPath": "C:\\Users\\samet\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\samet\\source\\repos\\StockTracking\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kerem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\samet\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -927,7 +927,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -10,3 +10,15 @@ C:\Users\Kerem\Source\Repos\StockTracking\Entities\obj\Debug\netstandard2.1\Enti
 C:\Users\Kerem\Source\Repos\StockTracking\Entities\obj\Debug\netstandard2.1\Entities.csproj.CopyComplete
 C:\Users\Kerem\Source\Repos\StockTracking\Entities\obj\Debug\netstandard2.1\Entities.dll
 C:\Users\Kerem\Source\Repos\StockTracking\Entities\obj\Debug\netstandard2.1\Entities.pdb
+C:\Users\samet\source\repos\StockTracking\Entities\bin\Debug\netstandard2.1\Entities.deps.json
+C:\Users\samet\source\repos\StockTracking\Entities\bin\Debug\netstandard2.1\Entities.dll
+C:\Users\samet\source\repos\StockTracking\Entities\bin\Debug\netstandard2.1\Entities.pdb
+C:\Users\samet\source\repos\StockTracking\Entities\bin\Debug\netstandard2.1\Core.dll
+C:\Users\samet\source\repos\StockTracking\Entities\bin\Debug\netstandard2.1\Core.pdb
+C:\Users\samet\source\repos\StockTracking\Entities\obj\Debug\netstandard2.1\Entities.csprojAssemblyReference.cache
+C:\Users\samet\source\repos\StockTracking\Entities\obj\Debug\netstandard2.1\Entities.AssemblyInfoInputs.cache
+C:\Users\samet\source\repos\StockTracking\Entities\obj\Debug\netstandard2.1\Entities.AssemblyInfo.cs
+C:\Users\samet\source\repos\StockTracking\Entities\obj\Debug\netstandard2.1\Entities.csproj.CoreCompileInputs.cache
+C:\Users\samet\source\repos\StockTracking\Entities\obj\Debug\netstandard2.1\Entities.csproj.CopyComplete
+C:\Users\samet\source\repos\StockTracking\Entities\obj\Debug\netstandard2.1\Entities.dll
+C:\Users\samet\source\repos\StockTracking\Entities\obj\Debug\netstandard2.1\Entities.pdb

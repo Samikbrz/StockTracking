@@ -12,3 +12,17 @@ C:\Users\Kerem\Source\Repos\StockTracking\DataAccess\obj\Debug\netstandard2.1\Da
 C:\Users\Kerem\Source\Repos\StockTracking\DataAccess\obj\Debug\netstandard2.1\DataAccess.csproj.CopyComplete
 C:\Users\Kerem\Source\Repos\StockTracking\DataAccess\obj\Debug\netstandard2.1\DataAccess.dll
 C:\Users\Kerem\Source\Repos\StockTracking\DataAccess\obj\Debug\netstandard2.1\DataAccess.pdb
+C:\Users\samet\source\repos\StockTracking\DataAccess\bin\Debug\netstandard2.1\DataAccess.deps.json
+C:\Users\samet\source\repos\StockTracking\DataAccess\bin\Debug\netstandard2.1\DataAccess.dll
+C:\Users\samet\source\repos\StockTracking\DataAccess\bin\Debug\netstandard2.1\DataAccess.pdb
+C:\Users\samet\source\repos\StockTracking\DataAccess\bin\Debug\netstandard2.1\Core.dll
+C:\Users\samet\source\repos\StockTracking\DataAccess\bin\Debug\netstandard2.1\Entities.dll
+C:\Users\samet\source\repos\StockTracking\DataAccess\bin\Debug\netstandard2.1\Core.pdb
+C:\Users\samet\source\repos\StockTracking\DataAccess\bin\Debug\netstandard2.1\Entities.pdb
+C:\Users\samet\source\repos\StockTracking\DataAccess\obj\Debug\netstandard2.1\DataAccess.csprojAssemblyReference.cache
+C:\Users\samet\source\repos\StockTracking\DataAccess\obj\Debug\netstandard2.1\DataAccess.AssemblyInfoInputs.cache
+C:\Users\samet\source\repos\StockTracking\DataAccess\obj\Debug\netstandard2.1\DataAccess.AssemblyInfo.cs
+C:\Users\samet\source\repos\StockTracking\DataAccess\obj\Debug\netstandard2.1\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\samet\source\repos\StockTracking\DataAccess\obj\Debug\netstandard2.1\DataAccess.csproj.CopyComplete
+C:\Users\samet\source\repos\StockTracking\DataAccess\obj\Debug\netstandard2.1\DataAccess.dll
+C:\Users\samet\source\repos\StockTracking\DataAccess\obj\Debug\netstandard2.1\DataAccess.pdb

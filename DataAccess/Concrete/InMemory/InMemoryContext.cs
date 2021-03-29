@@ -9,8 +9,7 @@ namespace Entities.Concrete
     {
         IList<ProductUnit> _productUnits;
         public InMemoryContext()
-        {
-            
+        {            
             _productUnits = new List<ProductUnit>
             {
                 new ProductUnit{ProductUnitId=1, ProductUnitName="Şişe" },
@@ -20,13 +19,15 @@ namespace Entities.Concrete
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            using (var context = new InMemoryContext())
+        {   
+            if (!optionsBuilder.IsConfigured)
             {
-                context.productUnits.AddRange(_productUnits);
-                context.SaveChanges();
+                using (var context = new InMemoryContext())
+                {
+                    context.ProductUnits.AddRange(_productUnits);
+                    context.SaveChanges();
+                }
             }
-            
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -48,7 +49,7 @@ namespace Entities.Concrete
             modelBuilder.Entity<StoreTransferTargetShelf>().HasKey(sc => new { sc.TargetShelfId, sc.StockStoreId });
         }       
 
-        public DbSet<ProductUnit> productUnits { get; set; }    
+        public DbSet<ProductUnit> ProductUnits { get; set; }    
         
     }
 }

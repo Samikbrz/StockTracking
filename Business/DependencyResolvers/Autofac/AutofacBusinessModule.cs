@@ -14,8 +14,8 @@ namespace Business.DependencyResolvers.Autofac
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<ProductUnitManager>().As<IProductUnitService>().SingleInstance();
-            builder.RegisterType<EfProductUnitDal>().As<IProductUnitDal>().SingleInstance();
+           builder.RegisterType<EfProductUnitDal>().As<IProductUnitDal>().SingleInstance();
+           builder.RegisterType<ProductUnitManager>().As<IProductUnitService>().SingleInstance();
         }
     }
 }

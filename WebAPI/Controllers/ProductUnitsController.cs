@@ -20,18 +20,6 @@ namespace WebAPI.Controllers
 		{
 			_productUnitService = productUnitService;
 		}
-		
-		[HttpPost("add")]
-		public IActionResult AddToList(ProductUnit productUnit)
-        {			
-			var result = _productUnitService.Add(productUnit);
-			if (result.Success)
-			{
-				return Ok(result.Message);
-			}
-
-            return BadRequest(result.Message);
-		}
 
 		[HttpGet("getall")]
 		public IActionResult GetList()
@@ -40,6 +28,42 @@ namespace WebAPI.Controllers
 			if (result.Success)
 			{
 				return Ok(result.Data);
+			}
+
+			return BadRequest(result.Message);
+		}
+
+		[HttpPost("add")]
+		public IActionResult Add(ProductUnit productUnit)
+        {			
+			var result = _productUnitService.Add(productUnit);
+			if (result.Success)
+			{
+				return Ok(result.Message);
+			}
+
+            return BadRequest(result.Message);
+		}		
+
+		[HttpPost("update")]
+		public IActionResult Update(ProductUnit productUnit)
+		{
+			var result = _productUnitService.Update(productUnit);
+			if (result.Success)
+			{
+				return Ok(result.Message);
+			}
+
+			return BadRequest(result.Message);
+		}
+
+		[HttpPost("delete")]
+		public IActionResult Delete(ProductUnit productUnit)
+		{
+			var result = _productUnitService.Delete(productUnit);
+			if (result.Success)
+			{
+				return Ok(result.Message);
 			}
 
 			return BadRequest(result.Message);

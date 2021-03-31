@@ -6,28 +6,14 @@ using System.Text;
 namespace Entities.Concrete
 {
 	public class InMemoryContext : DbContext
-	{
-		//IList<ProductUnit> _productUnits;
-		//public InMemoryContext(DbContextOptions<InMemoryContext> options) : base(options)
+	{	
+		//protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		//{
-		//	_productUnits = new List<ProductUnit>
-		//				{
-		//						new ProductUnit{ProductUnitId=1, ProductUnitName="Şişe" },
-		//						new ProductUnit{ProductUnitId=1, ProductUnitName="Kutu" },
-		//						new ProductUnit{ProductUnitId=1, ProductUnitName="Kova"}
-		//				};
+		//	if (!optionsBuilder.IsConfigured)
+		//	{
+		//		base.OnConfiguring(optionsBuilder.UseInMemoryDatabase(databaseName: "ProkectDb"));
+		//	}
 		//}
-
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		{
-
-			if (!optionsBuilder.IsConfigured)
-			{
-				base.OnConfiguring(optionsBuilder.UseInMemoryDatabase(databaseName: "ProkectDb"));
-
-			}
-
-		}
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.Entity<Brand>().HasOne<Stock>(s => s.Stock).WithMany(q => q.Brands).HasForeignKey(q => q.BrandOfStockId);
@@ -46,11 +32,8 @@ namespace Entities.Concrete
 			modelBuilder.Entity<StoreTransferTargetDrawer>().HasKey(sc => new { sc.TargetDrawerId, sc.StockStoreId });
 			modelBuilder.Entity<StoreTransferShelf>().HasKey(s => new { s.ShelfId, s.StockStoreId });
 			modelBuilder.Entity<StoreTransferTargetShelf>().HasKey(sc => new { sc.TargetShelfId, sc.StockStoreId });
-			
-
 		}
 
 		public DbSet<ProductUnit> ProductUnits { get; set; }
-
 	}
 }

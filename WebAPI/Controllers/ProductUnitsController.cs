@@ -20,16 +20,17 @@ namespace WebAPI.Controllers
 		{
 			_productUnitService = productUnitService;
 		}
-
-		[HttpPost]
-		public IActionResult Post()
-		{
-			var result = _productUnitService.Add(new ProductUnit() { ProductUnitId = 3, ProductUnitName = "Test" });
+		
+		[HttpPost("add")]
+		public IActionResult AddToList(ProductUnit productUnit)
+        {			
+			var result = _productUnitService.Add(productUnit);
 			if (result.Success)
 			{
-				return Ok(result);
+				return Ok(result.Message);
 			}
-			return BadRequest();
+
+            return BadRequest(result.Message);
 		}
 
 		[HttpGet("getall")]

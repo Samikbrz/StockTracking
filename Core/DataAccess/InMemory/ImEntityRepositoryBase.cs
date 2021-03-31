@@ -43,8 +43,7 @@ namespace Core.DataAccess.InMemory
         public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {
             using (TContext context = new TContext())            
-            {
-                
+            {                
                 return filter == null
                    ? context.Set<TEntity>().ToList()
                    : context.Set<TEntity>().Where(filter).ToList();

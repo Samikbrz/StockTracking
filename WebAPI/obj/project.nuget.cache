@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UjjDxJ6WmuFCK/XkYAStLzg+i0fvY769iLt9tU/JzLYukXZeJ+jj3eYhrxcI+PaVFhpYSGS097BNumrfo0qnbA==",
+  "dgSpecHash": "3QdPBRqV3g6oLchpoYqo2C21lJYXEVAfoPCyUz2RwibGiOjRed5uvncGQAm4PxQhcNjtVXKHGRhTOpZsH1Hxig==",
   "success": true,
   "projectFilePath": "C:\\Users\\samet\\source\\repos\\StockTracking\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\samet\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\samet\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.0\\autofac.extras.dynamicproxy.6.0.0.nupkg.sha512",
     "C:\\Users\\samet\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\samet\\.nuget\\packages\\fluentvalidation\\9.5.3\\fluentvalidation.9.5.3.nupkg.sha512",
     "C:\\Users\\samet\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\samet\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\samet\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

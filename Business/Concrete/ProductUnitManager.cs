@@ -1,8 +1,12 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidaiton;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,14 +21,12 @@ namespace Business.Concrete
 		{
 			_productUnitDal = productUnitDal;
 		}
+
+		[ValidationAspect(typeof(ProductUnitValidator))]
 		public IResult Add(ProductUnit productUnit)
-		{            		
-			if (productUnit.ProductUnitName.Length > 2)
-			{
-				_productUnitDal.Add(productUnit);
-				return new SuccessResult(Messages.ProductUnitAdded);
-			}
-			return new ErrorResult(Messages.ProductUnitNameInvalid);
+		{			
+			_productUnitDal.Add(productUnit);
+			return new SuccessResult(Messages.ProductUnitAdded);			
 		}
 
 		public IResult Delete(ProductUnit productUnit)

@@ -10,5 +10,12 @@ namespace Business.Constants
         public static string ProductUnitNameInvalid = "Product unit name invalid";
         public static string ProductUnitsListed = "Product units listed";
         public static string MaintenanceTime = "The system is currently in maintenance.";
+        public static string DeletedProductUnit = "";
+        public static string UpdatedProductUnit="";
+
+        public static string BrandAdded = "Added brand";
+        public static string BrandsListed = "";
+        public static string BrandDeleted = "";
+        internal static string UpdatedBrand;
     }
 }

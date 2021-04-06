@@ -32,7 +32,7 @@ namespace Business.Concrete
 		public IResult Delete(ProductUnit productUnit)
 		{
 			_productUnitDal.Delete(productUnit);
-			return new SuccessResult("Deleted product unit");
+			return new SuccessResult(Messages.DeletedProductUnit);
 		}
 
 		public IDataResult<List<ProductUnit>> GetAll()
@@ -43,7 +43,7 @@ namespace Business.Concrete
 		public IResult Update(ProductUnit productUnit)
 		{
 			_productUnitDal.Update(productUnit);
-			return new SuccessResult("Updated product unit");
+			return new SuccessResult(Messages.UpdatedProductUnit);
 		}
 	}
 }

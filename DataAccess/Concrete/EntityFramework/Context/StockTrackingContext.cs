@@ -14,5 +14,6 @@ namespace DataAccess.Concrete.EntityFramework.Context
         }
 	
 		public DbSet<ProductUnit> ProductUnit{ get; set; }
+		public DbSet<Brand> Brand{ get; set; }
     }
 }

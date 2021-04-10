@@ -10,16 +10,11 @@ namespace Entities.Concrete
         public int CompanyId { get; set; }
         public string CompanyName { get; set; }
         public string Adres { get; set; }
-        public string Tel { get; set; }
+        public string Tel1 { get; set; }
         public string Tel2 { get; set; }
         public string Fax { get; set; }
         public string TaxNo { get; set; }
-        public string TaxName { get; set; }       
-
-        public int CompanyOfProposalId { get; set; }
-        public Proposal Proposal { get; set; }
-
-        public ICollection<ProductOutput> ProductOutputs { get; set; }
-        public ICollection<ProductAcceptance> ProductAcceptances { get; set; }
+        public string TaxName { get; set; } 
+        public int ProposalId { get; set; }
     }
 }

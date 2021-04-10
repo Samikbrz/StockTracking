@@ -16,6 +16,8 @@ namespace Business.Constants
         public static string BrandAdded = "Added brand";
         public static string BrandsListed = "";
         public static string BrandDeleted = "";
-        internal static string UpdatedBrand;
+        public static string UpdatedBrand ="";
+        public static string CompanyDeleted="";
+        public static string CompanyLsited;
     }
 }

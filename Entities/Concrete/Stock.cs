@@ -17,8 +17,5 @@ namespace Entities.Concrete
         public decimal CriticalLevel { get; set; }
         public decimal UnitPrice { get; set; }
         public string Catalog { get; set; }
-
-        public ICollection<Brand> Brands { get; set; }
-        public ICollection<Model> Models { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Core.Utilities.Results;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +10,8 @@ namespace Business.Abstract
     public interface ICompanyService
     {
         IDataResult<List<Company>> GetAll();
+        IDataResult<List<CompanyDetailDto>> GetProductDetails();
+        IDataResult<List<Company>> GetByCompanyName(string companyName);
         IResult Add(Company company);
         IResult Update(Company company);
         IResult Delete(Company company);

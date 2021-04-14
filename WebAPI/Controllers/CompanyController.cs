@@ -29,5 +29,29 @@ namespace WebAPI.Controllers
 
             return BadRequest(result.Message);
         }
+
+        [HttpGet("getdetail")]
+        public IActionResult GetDetailList()
+        {
+            var result = _companyService.GetProductDetails();
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+
+            return BadRequest(result.Message);
+        }
+
+        [HttpGet("getbycompanyname")]
+        public IActionResult GetByCompanyName(string companyName)
+        {
+            var result = _companyService.GetByCompanyName(companyName);
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+
+            return BadRequest(result.Message);
+        }
     }
 }

@@ -12,5 +12,6 @@ namespace Business.Abstract
         IResult Add(ProductUnit productUnit);
         IResult Update(ProductUnit productUnit);
         IResult Delete(ProductUnit productUnit);
+        IResult AddTransactionalTest(ProductUnit productUnit);
     }
 }

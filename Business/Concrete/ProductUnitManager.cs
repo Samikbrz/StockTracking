@@ -2,6 +2,9 @@
 using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidaiton;
+using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Performance;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Business;
@@ -26,6 +29,7 @@ namespace Business.Concrete
 
         [SecuredOperation("admin")]
         [ValidationAspect(typeof(ProductUnitValidator))]
+        [CacheRemoveAspect("IProductUnitService.Get")]
         public IResult Add(ProductUnit productUnit)
         {
             IResult result = BusinessRules.Run(CheckProductUnitNamaExist(productUnit.ProductUnitName));
@@ -38,17 +42,27 @@ namespace Business.Concrete
             return new SuccessResult(Messages.ProductUnitAdded);
         }
 
+        [TransactionScopeAspect]
+        public IResult AddTransactionalTest(ProductUnit productUnit)
+        {
+            throw new NotImplementedException();
+        }
+
+        [CacheRemoveAspect("IProductUnitService.Get")]
         public IResult Delete(ProductUnit productUnit)
         {
             _productUnitDal.Delete(productUnit);
             return new SuccessResult(Messages.DeletedProductUnit);
         }
 
+        [CacheAspect]
+        [PerformanceAspect(5)]
         public IDataResult<List<ProductUnit>> GetAll()
         {
             return new SuccessDataResult<List<ProductUnit>>(_productUnitDal.GetAll(), Messages.ProductUnitsListed);
         }
 
+        [CacheRemoveAspect("IProductUnitService.Get")]
         public IResult Update(ProductUnit productUnit)
         {
             _productUnitDal.Update(productUnit);

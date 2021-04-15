@@ -51,6 +51,10 @@
               "target": "Package",
               "version": "[6.1.0, )"
             },
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
             "Autofac.Extras.DynamicProxy": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -58,6 +62,18 @@
             "FluentValidation": {
               "target": "Package",
               "version": "[9.5.3, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             }
           },
           "imports": [
@@ -131,9 +147,21 @@
               "target": "Package",
               "version": "[9.5.3, )"
             },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.12, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.10.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.10.1, )"
             }
           },
           "imports": [

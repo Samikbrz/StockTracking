@@ -51,7 +51,7 @@ namespace WebAPI.Controllers
                 return Ok(result.Data);
             }
 
-            return BadRequest(result.Message);
+            return BadRequest(result.Message); 
         }
     }
 }

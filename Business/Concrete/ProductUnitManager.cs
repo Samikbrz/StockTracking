@@ -1,8 +1,10 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidaiton;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -14,36 +16,53 @@ using System.Text;
 
 namespace Business.Concrete
 {
-	public class ProductUnitManager : IProductUnitService
-	{
-		IProductUnitDal _productUnitDal;       
-		public ProductUnitManager(IProductUnitDal productUnitDal)
-		{
-			_productUnitDal = productUnitDal;
-		}
+    public class ProductUnitManager : IProductUnitService
+    {
+        IProductUnitDal _productUnitDal;
+        public ProductUnitManager(IProductUnitDal productUnitDal)
+        {
+            _productUnitDal = productUnitDal;
+        }
 
-		[ValidationAspect(typeof(ProductUnitValidator))]
-		public IResult Add(ProductUnit productUnit)
-		{			
-			_productUnitDal.Add(productUnit);
-			return new SuccessResult(Messages.ProductUnitAdded);			
-		}
+        [SecuredOperation("admin")]
+        [ValidationAspect(typeof(ProductUnitValidator))]
+        public IResult Add(ProductUnit productUnit)
+        {
+            IResult result = BusinessRules.Run(CheckProductUnitNamaExist(productUnit.ProductUnitName));
+            if (result != null)
+            {
+                return result;
+            }
 
-		public IResult Delete(ProductUnit productUnit)
-		{
-			_productUnitDal.Delete(productUnit);
-			return new SuccessResult(Messages.DeletedProductUnit);
-		}
+            _productUnitDal.Add(productUnit);
+            return new SuccessResult(Messages.ProductUnitAdded);
+        }
 
-		public IDataResult<List<ProductUnit>> GetAll()
-		{		
-			return new SuccessDataResult<List<ProductUnit>>(_productUnitDal.GetAll(), Messages.ProductUnitsListed);
-		}
+        public IResult Delete(ProductUnit productUnit)
+        {
+            _productUnitDal.Delete(productUnit);
+            return new SuccessResult(Messages.DeletedProductUnit);
+        }
 
-		public IResult Update(ProductUnit productUnit)
-		{
-			_productUnitDal.Update(productUnit);
-			return new SuccessResult(Messages.UpdatedProductUnit);
-		}
-	}
+        public IDataResult<List<ProductUnit>> GetAll()
+        {
+            return new SuccessDataResult<List<ProductUnit>>(_productUnitDal.GetAll(), Messages.ProductUnitsListed);
+        }
+
+        public IResult Update(ProductUnit productUnit)
+        {
+            _productUnitDal.Update(productUnit);
+            return new SuccessResult(Messages.UpdatedProductUnit);
+        }
+
+        private IResult CheckProductUnitNamaExist(string productUnitName)
+        {
+            var result = _productUnitDal.GetAll(p => p.ProductUnitName == productUnitName).Any();
+            if (result)
+            {
+                return new ErrorResult(Messages.ProductUnitNameAlreadyExist);
+            }
+            return new SuccessResult();
+        }
+    }
 }

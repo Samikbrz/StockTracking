@@ -7,7 +7,7 @@ namespace Entities.Concrete
 {
     public class Company : IEntity
     {
-        public int CompanyId { get; set; }
+        public int Id { get; set; }
         public string CompanyName { get; set; }
         public string Adres { get; set; }
         public string Tel1 { get; set; }

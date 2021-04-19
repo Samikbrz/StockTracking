@@ -7,7 +7,7 @@ namespace Entities.Concrete
 {
     public class ExchhangeRate : IEntity
     {
-        public int ExchhangeRateId { get; set; }
+        public int Id { get; set; }
         public decimal USD { get; set; }
         public decimal EURO { get; set; }
         public decimal STERLIN { get; set; }

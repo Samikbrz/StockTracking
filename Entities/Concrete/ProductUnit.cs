@@ -7,7 +7,7 @@ namespace Entities.Concrete
 {
     public class ProductUnit : IEntity
     {
-        public int ProductUnitId { get; set; }
+        public int Id { get; set; }
         public string ProductUnitName { get; set; }
     }
 }

@@ -7,7 +7,7 @@ namespace Entities.Concrete
 {
     public class Drawer : IEntity
     {
-        public int DrawerId { get; set; }
+        public int Id { get; set; }
         public string DrawerName { get; set; }
         public int ShelfId { get; set; }      
     }

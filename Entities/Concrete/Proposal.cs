@@ -7,7 +7,7 @@ namespace Entities.Concrete
 {
     public class Proposal : IEntity
     {
-        public int ProposalId { get; set; }
+        public int Id { get; set; }
         public string ProposalNo { get; set; }
         public DateTime Date { get; set; }       
         public string UserName { get; set; }

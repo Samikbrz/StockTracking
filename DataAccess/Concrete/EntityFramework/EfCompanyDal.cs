@@ -18,10 +18,10 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result = from c in context.Company
                              join p in context.Proposal
-                             on c.ProposalId equals p.ProposalId
+                             on c.ProposalId equals p.Id
                              select new CompanyDetailDto
                              {
-                                 CompanyId=c.CompanyId,
+                                 CompanyId=c.Id,
                                  CompanyName=c.CompanyName,
                                  Date=p.Date,
                                  ProposalNo=p.ProposalNo,

@@ -11,6 +11,5 @@ namespace Entities.Concrete
         public string StoreName { get; set; }
         public bool IsSalesStore { get; set; }
         public int StockStoreId { get; set; }
-        public int StoreTranferId { get; set; }
     }
 }

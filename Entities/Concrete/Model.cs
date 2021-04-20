@@ -11,10 +11,7 @@ namespace Entities.Concrete
         public string ModelName { get; set; }
         public string ModelDefination { get; set; }
         public string OriginalBarcode { get; set; }
-
-        public Brand Brand { get; set; }
-
-        public int ModelOfStockId { get; set; }
-        public Stock Stock { get; set; }
+        public int StockId { get; set; }
+      
     }
 }

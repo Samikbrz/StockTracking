@@ -30,5 +30,9 @@ namespace Business.Constants
         public static string UserAlreadyExists;
         public static string SuccessfulLogin;
         public static string PasswordError;
+        internal static string DetetedDrawer;
+        internal static string DrawerAdded;
+        internal static bool DrawerListed;
+        internal static string DrawerUpdated;
     }
 }

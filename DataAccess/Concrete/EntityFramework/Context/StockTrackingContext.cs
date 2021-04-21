@@ -19,6 +19,7 @@ namespace DataAccess.Concrete.EntityFramework.Context
 		public DbSet<Company> Company{ get; set; }
 		public DbSet<Proposal> Proposal{ get; set; }
 		public DbSet<Drawer> Drawer{ get; set; }
+		public DbSet<ExchangeRate> ExchangeRate{ get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }

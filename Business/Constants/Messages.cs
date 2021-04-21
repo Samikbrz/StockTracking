@@ -26,13 +26,19 @@ namespace Business.Constants
         public static string AuthorizationDenied = "You have no authority.";
         public static string UserRegistered = "";
         public static string UserNotFound = "";
-        public static string AccessTokenCreated;
-        public static string UserAlreadyExists;
-        public static string SuccessfulLogin;
-        public static string PasswordError;
-        internal static string DetetedDrawer;
-        internal static string DrawerAdded;
-        internal static bool DrawerListed;
-        internal static string DrawerUpdated;
+        public static string AccessTokenCreated="";
+        public static string UserAlreadyExists="";
+        public static string SuccessfulLogin="";
+        public static string PasswordError="";
+
+        public static string DetetedDrawer="";
+        public static string DrawerAdded="";
+        public static string DrawerListed="";
+        public static string DrawerUpdated="";
+
+        public static string ExchangeRateAdded="";
+        public static string ExchangeRateDeleted="";
+        public static string ExchangeRateListed="";
+        public static string ExchangeRateUpdated="";
     }
 }

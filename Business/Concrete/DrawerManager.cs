@@ -30,7 +30,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Drawer>> GetAll()
         {
-            return new DataResult<List<Drawer>>(_drawerDal.GetAll(),Messages.DrawerListed);
+            return new SuccessDataResult<List<Drawer>>(_drawerDal.GetAll(), Messages.DrawerListed);
         }
 
         public IResult Update(Drawer drawer)

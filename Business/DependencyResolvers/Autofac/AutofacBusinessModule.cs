@@ -31,6 +31,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<DrawerManager>().As<IDrawerService>().SingleInstance();
             builder.RegisterType<EfDrawerDal>().As<IDrawerDal>().SingleInstance();
 
+            builder.RegisterType<ExchangeRateManager>().As<IExchangeRateService>().SingleInstance();
+            builder.RegisterType<EfExchangeRateDal>().As<IExchangeRateDal>().SingleInstance();
+
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserDal>().As<IUserDal>();
 

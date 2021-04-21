@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Entities.Concrete
 {
-    public class ExchhangeRate : IEntity
+    public class ExchangeRate : IEntity
     {
         public int Id { get; set; }
         public decimal USD { get; set; }

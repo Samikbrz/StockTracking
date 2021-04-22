@@ -40,5 +40,10 @@ namespace Business.Constants
         public static string ExchangeRateDeleted="";
         public static string ExchangeRateListed="";
         public static string ExchangeRateUpdated="";
+
+        public static string AddedModel="";
+        public static string DeletedModel="";
+        public static string ListedModel="";
+        public static string UpdatedModel="";
     }
 }

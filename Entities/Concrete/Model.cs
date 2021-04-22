@@ -12,6 +12,5 @@ namespace Entities.Concrete
         public string ModelDefination { get; set; }
         public string OriginalBarcode { get; set; }
         public int StockId { get; set; }
-      
     }
 }

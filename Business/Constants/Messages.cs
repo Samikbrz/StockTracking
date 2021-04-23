@@ -45,5 +45,10 @@ namespace Business.Constants
         public static string DeletedModel="";
         public static string ListedModel="";
         public static string UpdatedModel="";
+
+        public static string AddedProductAcceptance="";
+        public static string DeletedProductAcceptance="";
+        public static string ListedProductAcceptance="";
+        public static string UpdatedProductAcceptance="";
     }
 }

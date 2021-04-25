@@ -40,6 +40,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<ProductAcceptanceManager>().As<IProductAcceptanceService>().SingleInstance();
             builder.RegisterType<EfProductAcceptanceDal>().As<IProductAcceptanceDal>().SingleInstance();
 
+            builder.RegisterType<ProductOutputManager>().As<IProductOutputService>().SingleInstance();
+            builder.RegisterType<EfProductOutputDal>().As<IProductOutputDal>().SingleInstance();
+
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserDal>().As<IUserDal>();
 

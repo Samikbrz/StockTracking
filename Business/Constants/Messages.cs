@@ -50,13 +50,15 @@ namespace Business.Constants
         public static string DeletedProductAcceptance="";
         public static string ListedProductAcceptance="";
         public static string UpdatedProductAcceptance="";
-        internal static string AddedProductOutput;
-        internal static string DeletedProductOutput;
-        internal static bool ListedProductOutput;
-        internal static string UpdatedProductOutput;
-        internal static string AddedProposal;
-        internal static string DeletedProposal;
-        internal static string ListedProposal;
-        internal static string UpdatedProposal;
+
+        public static string AddedProductOutput="";
+        public static string DeletedProductOutput="";
+        public static string ListedProductOutput="";
+        public static string UpdatedProductOutput="";
+
+        public static string AddedProposal="";
+        public static string DeletedProposal="";
+        public static string ListedProposal="";
+        public static string UpdatedProposal="";
     }
 }

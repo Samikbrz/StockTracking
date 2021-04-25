@@ -29,9 +29,9 @@ namespace Business.Concrete
             return new SuccessResult(Messages.DeletedProductOutput);
         }
 
-        public IDataResult<IList<ProductOutput>> GetAll()
+        public IDataResult<List<ProductOutput>> GetAll()
         {
-            return new DataResult<IList<ProductOutput>>(_productOutputDal.GetAll(), Messages.ListedProductOutput);
+            return new SuccessDataResult<List<ProductOutput>>(_productOutputDal.GetAll(), Messages.ListedProductOutput);
         }
 
         public IResult Update(ProductOutput productOutput)

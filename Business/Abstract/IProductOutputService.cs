@@ -8,7 +8,7 @@ namespace Business.Abstract
 {
     public interface IProductOutputService
     {
-        IDataResult<IList<ProductOutput>> GetAll();
+        IDataResult<List<ProductOutput>> GetAll();
         IResult Add(ProductOutput productOutput);
         IResult Update(ProductOutput productOutput);
         IResult Delete(ProductOutput productOutput);

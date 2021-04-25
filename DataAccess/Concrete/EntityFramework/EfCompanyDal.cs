@@ -16,8 +16,8 @@ namespace DataAccess.Concrete.EntityFramework
         {
             using (StockTrackingContext context=new StockTrackingContext())
             {
-                var result = from c in context.Company
-                             join p in context.Proposal
+                var result = from c in context.Companies
+                             join p in context.Proposals
                              on c.ProposalId equals p.Id
                              select new CompanyDetailDto
                              {

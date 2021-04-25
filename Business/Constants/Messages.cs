@@ -54,5 +54,9 @@ namespace Business.Constants
         internal static string DeletedProductOutput;
         internal static bool ListedProductOutput;
         internal static string UpdatedProductOutput;
+        internal static string AddedProposal;
+        internal static string DeletedProposal;
+        internal static string ListedProposal;
+        internal static string UpdatedProposal;
     }
 }

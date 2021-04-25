@@ -43,6 +43,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<ProductOutputManager>().As<IProductOutputService>().SingleInstance();
             builder.RegisterType<EfProductOutputDal>().As<IProductOutputDal>().SingleInstance();
 
+            builder.RegisterType<ProposalManager>().As<IProposalService>().SingleInstance();
+            builder.RegisterType<EfProposalDal>().As<IProposalDal>().SingleInstance();
+
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserDal>().As<IUserDal>();
 

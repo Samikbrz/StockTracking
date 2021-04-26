@@ -20,6 +20,7 @@ namespace DataAccess.Concrete.EntityFramework.Context
         public DbSet<Proposal> Proposals { get; set; }
         public DbSet<Drawer> Drawers { get; set; }
         public DbSet<Model> Models { get; set; }
+        public DbSet<Shelf> Shelves { get; set; }
         public DbSet<ProductAcceptance> ProductAcceptances { get; set; }
         public DbSet<ProductOutput> ProductOutputs { get; set; }
         public DbSet<ExchangeRate> ExchangeRates { get; set; }

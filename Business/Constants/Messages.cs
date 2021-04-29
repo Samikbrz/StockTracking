@@ -60,9 +60,15 @@ namespace Business.Constants
         public static string DeletedProposal="";
         public static string ListedProposal="";
         public static string UpdatedProposal="";
-        internal static string AddedShelf;
-        internal static string DeletedShelf;
-        internal static string UpdatedShelf;
-        internal static string ListedShelves;
+
+        public static string AddedShelf;
+        public static string DeletedShelf;
+        public static string UpdatedShelf;
+        public static string ListedShelves;
+
+        public static string UpdatedStock;
+        public static string ListedStock;
+        public static string DeletedStock;
+        public static string AddedStock;
     }
 }

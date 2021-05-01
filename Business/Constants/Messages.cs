@@ -70,5 +70,10 @@ namespace Business.Constants
         public static string ListedStock;
         public static string DeletedStock;
         public static string AddedStock;
+
+        public static string AddedStockKind;
+        public static string DeletedStockKind;
+        public static string ListedStockKind;
+        public static string UpdatedStockKind;
     }
 }

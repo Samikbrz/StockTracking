@@ -46,6 +46,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<ProposalManager>().As<IProposalService>().SingleInstance();
             builder.RegisterType<EfProposalDal>().As<IProposalDal>().SingleInstance();
 
+            builder.RegisterType<StockKindManager>().As<IStockKindService>().SingleInstance();
+            builder.RegisterType<EfStockKindDal>().As<IStockKindDal>().SingleInstance();
+
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserDal>().As<IUserDal>();
 

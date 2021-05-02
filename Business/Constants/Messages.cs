@@ -75,5 +75,9 @@ namespace Business.Constants
         public static string DeletedStockKind;
         public static string ListedStockKind;
         public static string UpdatedStockKind;
+        internal static string AddedStockStore;
+        internal static string DeletedStockStore;
+        internal static string ListedStockStores;
+        internal static string UpdatedStockStore;
     }
 }

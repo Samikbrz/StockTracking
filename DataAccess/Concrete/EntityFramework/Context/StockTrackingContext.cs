@@ -24,6 +24,9 @@ namespace DataAccess.Concrete.EntityFramework.Context
         public DbSet<ProductAcceptance> ProductAcceptances { get; set; }
         public DbSet<ProductOutput> ProductOutputs { get; set; }
         public DbSet<ExchangeRate> ExchangeRates { get; set; }
+        public DbSet<StockStore> StockStores { get; set; }
+        public DbSet<Stock> Stocks { get; set; }
+        public DbSet<StockKind> StockKinds { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<UserOperationClaim> UserOperationClaims { get; set; }

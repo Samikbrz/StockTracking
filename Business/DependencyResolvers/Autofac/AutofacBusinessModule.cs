@@ -49,6 +49,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<StockKindManager>().As<IStockKindService>().SingleInstance();
             builder.RegisterType<EfStockKindDal>().As<IStockKindDal>().SingleInstance();
 
+            builder.RegisterType<StockStoreManager>().As<IStockStoreService>().SingleInstance();
+            builder.RegisterType<EfStockStoreDal>().As<IStockStoreDal>().SingleInstance();
+
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserDal>().As<IUserDal>();
 

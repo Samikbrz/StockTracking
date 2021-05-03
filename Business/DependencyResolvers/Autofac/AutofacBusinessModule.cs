@@ -52,6 +52,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<StockStoreManager>().As<IStockStoreService>().SingleInstance();
             builder.RegisterType<EfStockStoreDal>().As<IStockStoreDal>().SingleInstance();
 
+            builder.RegisterType<StoreManager>().As<IStoreService>().SingleInstance();
+            builder.RegisterType<EfStoreDal>().As<IStoreDal>().SingleInstance();
+
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserDal>().As<IUserDal>();
 

@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using Business.Abstract;
+using Business.Constants;
+using Core.Utilities.Results;
+using DataAccess.Abstract;
+using Entities.Concrete;
+
+namespace Business.Concrete
+{
+    public class StoreTransferManager : IStoreTransferService
+    {
+        private IStoreTransferDal _storeTransferDal;
+        public StoreTransferManager(IStoreTransferDal storeTransferDal)
+        {
+            _storeTransferDal = storeTransferDal;
+        }
+        public IResult Add(StoreTransfer storeTransfer)
+        {
+            _storeTransferDal.Add(storeTransfer);
+            return new SuccessResult(Messages.AddedStoreTransfer);
+        }
+
+        public IResult Delete(StoreTransfer storeTransfer)
+        {
+            _storeTransferDal.Delete(storeTransfer);
+            return new SuccessResult(Messages.DeletedStoreTransfer);
+        }
+
+        public IDataResult<List<StoreTransfer>> GetAll()
+        {
+            return new SuccessDataResult<List<StoreTransfer>>(_storeTransferDal.GetAll(), Messages.ListedStoreTransfer);
+        }
+
+        public IResult Update(StoreTransfer storeTransfer)
+        {
+            _storeTransferDal.Update(storeTransfer);
+            return new SuccessResult(Messages.UpdatedStoreTransfer);
+        }
+    }
+}

@@ -55,6 +55,9 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<StoreManager>().As<IStoreService>().SingleInstance();
             builder.RegisterType<EfStoreDal>().As<IStoreDal>().SingleInstance();
 
+            builder.RegisterType<StoreTransferManager>().As<IStoreTransferService>().SingleInstance();
+            builder.RegisterType<EfStoreTransferDal>().As<IStoreTransferDal>().SingleInstance();
+
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserDal>().As<IUserDal>();
 

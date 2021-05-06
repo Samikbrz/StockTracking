@@ -10,8 +10,6 @@ namespace Entities.Concrete
         public int Id { get; set; }
         public string TransferNo { get; set; }        
         public DateTime Date { get; set; }
-        public string UserName { get; set; }         
-        public Store Store { get; set; }
-        public Store TargetStore { get; set; }
+        public string UserName { get; set; }
     }
 }

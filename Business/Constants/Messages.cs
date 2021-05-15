@@ -88,7 +88,7 @@ namespace Business.Constants
 
         public static string AddedStoreTransfer;
         public static string DeletedStoreTransfer;
-        public static string ListedStoreTransfer="Bokumu ye";
+        public static string ListedStoreTransfer="";
         public static string UpdatedStoreTransfer;
     }
 }

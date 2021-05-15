@@ -27,7 +27,7 @@ namespace Business.Concrete
             _productUnitDal = productUnitDal;
         }
 
-        [SecuredOperation("admin")]
+        //[SecuredOperation("admin")]
         [ValidationAspect(typeof(ProductUnitValidator))]
         [CacheRemoveAspect("IProductUnitService.Get")]
         public IResult Add(ProductUnit productUnit)

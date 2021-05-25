@@ -62,6 +62,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ProductUnit>>(_productUnitDal.GetAll(), Messages.ProductUnitsListed);
         }
 
+        public IDataResult<List<ProductUnit>> GetById(int id)
+        {
+            return new SuccessDataResult<List<ProductUnit>>(_productUnitDal.GetAll(x => x.Id == id));
+        }
+
         [CacheRemoveAspect("IProductUnitService.Get")]
         public IResult Update(ProductUnit productUnit)
         {

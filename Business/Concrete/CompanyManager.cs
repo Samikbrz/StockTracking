@@ -40,11 +40,6 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Company>>(_companyDal.GetAll(p => p.CompanyName==companyName));
         }
 
-        public IDataResult<List<CompanyDetailDto>> GetProductDetails()
-        {
-            return new SuccessDataResult<List<CompanyDetailDto>>(_companyDal.GetCompanyDetails());
-        }
-
         public IResult Update(Company company)
         {
             throw new NotImplementedException();

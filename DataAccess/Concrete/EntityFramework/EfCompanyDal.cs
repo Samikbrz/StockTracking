@@ -12,23 +12,6 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCompanyDal : EfEntityRepositoryBase<Company, StockTrackingContext> , ICompanyDal
     {
-        public List<CompanyDetailDto> GetCompanyDetails()
-        {
-            using (StockTrackingContext context=new StockTrackingContext())
-            {
-                var result = from c in context.Companies
-                             join p in context.Proposals
-                             on c.ProposalId equals p.Id
-                             select new CompanyDetailDto
-                             {
-                                 CompanyId=c.Id,
-                                 CompanyName=c.CompanyName,
-                                 Date=p.Date,
-                                 ProposalNo=p.ProposalNo,
-                                 UserName=p.UserName
-                             };
-                return result.ToList();
-            }
-        }
+       
     }
 }

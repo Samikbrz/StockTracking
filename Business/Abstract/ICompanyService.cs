@@ -9,8 +9,7 @@ namespace Business.Abstract
 {
     public interface ICompanyService
     {
-        IDataResult<List<Company>> GetAll();
-        IDataResult<List<CompanyDetailDto>> GetProductDetails();
+        IDataResult<List<Company>> GetAll();       
         IDataResult<List<Company>> GetByCompanyName(string companyName);
         IResult Add(Company company);
         IResult Update(Company company);

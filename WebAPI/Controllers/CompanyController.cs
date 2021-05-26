@@ -24,23 +24,11 @@ namespace WebAPI.Controllers
             var result = _companyService.GetAll();
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
             }
 
             return BadRequest(result.Message);
-        }
-
-        [HttpGet("getdetail")]
-        public IActionResult GetDetailList()
-        {
-            var result = _companyService.GetProductDetails();
-            if (result.Success)
-            {
-                return Ok(result.Data);
-            }
-
-            return BadRequest(result.Message);
-        }
+        }       
 
         [HttpGet("getbycompanyname")]
         public IActionResult GetByCompanyName(string companyName)

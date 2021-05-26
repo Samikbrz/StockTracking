@@ -14,7 +14,6 @@ namespace Entities.Concrete
         public string Tel2 { get; set; }
         public string Fax { get; set; }
         public string TaxNo { get; set; }
-        public string TaxName { get; set; } 
-        public int ProposalId { get; set; }
+        public string TaxName { get; set; }         
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -30,16 +31,52 @@ namespace WebAPI.Controllers
             return BadRequest(result.Message);
         }       
 
-        [HttpGet("getbycompanyname")]
-        public IActionResult GetByCompanyName(string companyName)
+        [HttpGet("getcompanybyid")]
+        public IActionResult Getcompanybyid(int id)
         {
-            var result = _companyService.GetByCompanyName(companyName);
+            var result = _companyService.GetCompanyById(id);
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
             }
 
             return BadRequest(result.Message); 
+        }
+
+        [HttpPost("add")]
+        public IActionResult Add(Company company)
+        {
+            var result = _companyService.Add(company);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
+
+        [HttpPost("update")]
+        public IActionResult Update(Company company)
+        {
+            var result = _companyService.Update(company);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
+
+        [HttpPost("delete")]
+        public IActionResult Delete(Company company)
+        {
+            var result = _companyService.Delete(company);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
         }
     }
 }

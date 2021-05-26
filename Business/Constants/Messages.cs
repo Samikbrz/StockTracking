@@ -90,5 +90,7 @@ namespace Business.Constants
         public static string DeletedStoreTransfer;
         public static string ListedStoreTransfer="";
         public static string UpdatedStoreTransfer;
+
+        public static string UpdatedCompany="Firma güncellendi";
     }
 }

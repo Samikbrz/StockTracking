@@ -33,6 +33,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Store>>(_storeDal.GetAll(), Messages.ListedStore);
         }
 
+        public IDataResult<List<Store>> GetById(int id)
+        {
+            return new SuccessDataResult<List<Store>>(_storeDal.GetAll(s => s.Id == id),Messages.ListedStore);
+        }
+
         public IResult Update(Store store)
         {
             _storeDal.Update(store);

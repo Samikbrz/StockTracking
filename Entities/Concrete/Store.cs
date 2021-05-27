@@ -9,7 +9,6 @@ namespace Entities.Concrete
     {
         public int Id { get; set; }
         public string StoreName { get; set; }
-        public bool IsSalesStore { get; set; }
-        public int StockStoreId { get; set; }
+        public string IsSalesStore { get; set; }        
     }
 }

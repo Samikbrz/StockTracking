@@ -32,6 +32,18 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
+        [HttpGet("getstorebyid")]
+        public IActionResult GetStoreById(int id)
+        {
+            var result = _storeService.GetById(id);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }
+
         [HttpPost("add")]
         public IActionResult Add(Store store)
         {

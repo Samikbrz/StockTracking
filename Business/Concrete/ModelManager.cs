@@ -6,6 +6,7 @@ using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Business.Concrete
 {
@@ -31,6 +32,11 @@ namespace Business.Concrete
         public IDataResult<List<Model>> GetAll()
         {
             return new SuccessDataResult<List<Model>>(_modelDal.GetAll(), Messages.ListedModel);
+        }
+
+        public IDataResult<List<ModelDto>> GetModelDetail()
+        {
+            return new SuccessDataResult<List<ModelDto>>(_modelDal.GetModelDetails(), Messages.ListedModel);
         }
 
         public IResult Update(Model model)

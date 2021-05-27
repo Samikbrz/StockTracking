@@ -25,7 +25,19 @@ namespace WebAPI.Controllers
             var result = _modelService.GetAll();
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
+            }
+
+            return BadRequest(result.Message);
+        }
+
+        [HttpGet("getalldetail")]
+        public IActionResult GetDetail()
+        {
+            var result = _modelService.GetModelDetail();
+            if (result.Success)
+            {
+                return Ok(result);
             }
 
             return BadRequest(result.Message);

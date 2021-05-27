@@ -34,6 +34,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Model>>(_modelDal.GetAll(), Messages.ListedModel);
         }
 
+        public IDataResult<List<Model>> GetById(int id)
+        {
+            return new SuccessDataResult<List<Model>>(_modelDal.GetAll(m=>m.Id==id), Messages.ListedModel);
+        }
+
         public IDataResult<List<ModelDto>> GetModelDetail()
         {
             return new SuccessDataResult<List<ModelDto>>(_modelDal.GetModelDetails(), Messages.ListedModel);

@@ -31,6 +31,18 @@ namespace WebAPI.Controllers
             return BadRequest(result.Message);
         }
 
+        [HttpGet("getmodelsbyid")]
+        public IActionResult GetById(int id)
+        {
+            var result = _modelService.GetById(id);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result.Message);
+        }
+
         [HttpGet("getalldetail")]
         public IActionResult GetDetail()
         {

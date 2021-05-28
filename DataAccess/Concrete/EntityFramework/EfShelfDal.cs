@@ -18,7 +18,7 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result = from shelf in context.Shelves
                              join store in context.Stores
-                             on shelf.Id equals store.Id
+                             on shelf.StoreId equals store.Id
                              select new ShelfDto
                              {
                                 Id=shelf.Id,

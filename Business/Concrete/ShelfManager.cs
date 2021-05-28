@@ -41,7 +41,7 @@ namespace Business.Concrete
 
         public IDataResult<List<ShelfDto>> GetDetail()
         {
-            return new SuccessDataResult<List<ShelfDto>>(_shelfDal.GetShelfDetails(), Messages.ListedShelves);
+            return new SuccessDataResult<List<ShelfDto>>(_shelfDal.GetShelfDetails());
         }
 
         public IResult Update(Shelf shelf)

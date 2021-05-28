@@ -6,6 +6,7 @@ using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Business.Concrete
 {
@@ -31,6 +32,16 @@ namespace Business.Concrete
         public IDataResult<List<Shelf>> GetAll()
         {
             return new SuccessDataResult<List<Shelf>>(_shelfDal.GetAll(), Messages.ListedShelves);
+        }
+
+        public IDataResult<List<Shelf>> GetById(int id)
+        {
+            return new SuccessDataResult<List<Shelf>>(_shelfDal.GetAll(s=>s.Id==id), Messages.ListedShelves);
+        }
+
+        public IDataResult<List<ShelfDto>> GetDetail()
+        {
+            return new SuccessDataResult<List<ShelfDto>>(_shelfDal.GetShelfDetails(), Messages.ListedShelves);
         }
 
         public IResult Update(Shelf shelf)

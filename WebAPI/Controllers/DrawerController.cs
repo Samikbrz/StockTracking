@@ -25,7 +25,31 @@ namespace WebAPI.Controllers
             var result = _drawerService.GetAll();
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
+            }
+
+            return BadRequest(result.Message);
+        }
+
+        [HttpGet("getbyid")]
+        public IActionResult GetById(int id)
+        {
+            var result = _drawerService.GetById(id);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result.Message);
+        }
+
+        [HttpGet("getdetail")]
+        public IActionResult GetDetail()
+        {
+            var result = _drawerService.GetDetail();
+            if (result.Success)
+            {
+                return Ok(result);
             }
 
             return BadRequest(result.Message);

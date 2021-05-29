@@ -10,6 +10,7 @@ namespace Entities.Concrete
         public int Id { get; set; }
         public string ProposalNo { get; set; }
         public DateTime Date { get; set; }       
-        public string UserName { get; set; }
+        public int UserId { get; set; }
+        public int CompanyId { get; set; }
     }
 }

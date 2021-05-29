@@ -21,7 +21,7 @@ namespace DataAccess.Concrete.EntityFramework
                              on drawer.ShelfId equals shelf.Id
                              select new DrawerDto
                              {
-                                 Id = shelf.Id,
+                                 Id = drawer.Id,
                                  ShelfName = shelf.ShelfName,
                                  DrawerName = drawer.DrawerName
                              };

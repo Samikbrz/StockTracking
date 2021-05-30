@@ -34,6 +34,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Proposal>>(_proposalDal.GetAll(), Messages.ListedProposal);
         }
 
+        public IDataResult<List<Proposal>> GetById(int id)
+        {
+            return new SuccessDataResult<List<Proposal>>(_proposalDal.GetAll(p=>p.Id==id), Messages.ListedProposal);
+        }
+
         public IDataResult<List<ProposalDto>> GetDetail()
         {
             return new SuccessDataResult<List<ProposalDto>>(_proposalDal.GetProposalDetails(), Messages.ListedProposal);

@@ -24,12 +24,12 @@ namespace Business.Constants
         public static string CompanyLsited = "";
 
         public static string AuthorizationDenied = "You have no authority.";
-        public static string UserRegistered = "";
-        public static string UserNotFound = "";
+        public static string UserRegistered = "Kayıt işlemi yapıldı";
+        public static string UserNotFound = "Kullanıcı bulunamadı";
         public static string AccessTokenCreated="";
-        public static string UserAlreadyExists="";
-        public static string SuccessfulLogin="";
-        public static string PasswordError="";
+        public static string UserAlreadyExists="Kullanıcı zaten mevcut";
+        public static string SuccessfulLogin="Giriş Yapıldı";
+        public static string PasswordError="Şifre hatalı!";
 
         public static string DetetedDrawer="";
         public static string DrawerAdded="";

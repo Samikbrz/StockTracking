@@ -27,7 +27,7 @@ namespace Business.Concrete
             _productUnitDal = productUnitDal;
         }
 
-        //[SecuredOperation("admin")]
+        [SecuredOperation("admin")]
         [ValidationAspect(typeof(ProductUnitValidator))]
         [CacheRemoveAspect("IProductUnitService.Get")]
         public IResult Add(ProductUnit productUnit)
@@ -49,6 +49,7 @@ namespace Business.Concrete
         }
 
         [CacheRemoveAspect("IProductUnitService.Get")]
+        [SecuredOperation("admin")]
         public IResult Delete(ProductUnit productUnit)
         {
             _productUnitDal.Delete(productUnit);
@@ -57,17 +58,20 @@ namespace Business.Concrete
 
         [CacheAspect]
         [PerformanceAspect(5)]
+        [SecuredOperation("admin")]
         public IDataResult<List<ProductUnit>> GetAll()
         {
             return new SuccessDataResult<List<ProductUnit>>(_productUnitDal.GetAll(), Messages.ProductUnitsListed);
         }
 
+        [SecuredOperation("admin")]
         public IDataResult<List<ProductUnit>> GetById(int id)
         {
             return new SuccessDataResult<List<ProductUnit>>(_productUnitDal.GetAll(x => x.Id == id));
         }
 
         [CacheRemoveAspect("IProductUnitService.Get")]
+        [SecuredOperation("admin")]
         public IResult Update(ProductUnit productUnit)
         {
             _productUnitDal.Update(productUnit);

@@ -10,6 +10,12 @@ namespace Entities.Concrete
         public int Id { get; set; }
         public string TransferNo { get; set; }        
         public DateTime Date { get; set; }
-        public string UserName { get; set; }
+        public int SourceStoreId { get; set; }
+        public int SourceShelfId { get; set; }
+        public int SourceDrawerId { get; set; }
+        public int TergetStoreId { get; set; }
+        public int TargetShelfId { get; set; }
+        public int TargetDrawerId { get; set; }
+        public int UserId { get; set; }
     }
 }

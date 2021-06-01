@@ -23,7 +23,7 @@ namespace Business.Constants
         public static string CompanyDeleted = "";
         public static string CompanyLsited = "";
 
-        public static string AuthorizationDenied = "You have no authority.";
+        public static string AuthorizationDenied = "Bu işlemi yapmak için yetkiniz yok!";
         public static string UserRegistered = "Kayıt işlemi yapıldı";
         public static string UserNotFound = "Kullanıcı bulunamadı";
         public static string AccessTokenCreated="";

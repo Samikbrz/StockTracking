@@ -9,6 +9,7 @@ namespace Business.Abstract
     public interface IUserService
     {
         IDataResult<List<User>> GetAll();
+        IDataResult<List<User>> GetByEmail(string email);
         List<OperationClaim> GetClaims(User user);
         void Add(User user);
         User GetByMail(string email);

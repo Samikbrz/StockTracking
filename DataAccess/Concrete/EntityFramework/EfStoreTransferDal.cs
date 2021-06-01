@@ -40,7 +40,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  SourceShelfName=shelf.ShelfName,
                                  TargetShelfName=targetshelf.ShelfName,
                                  SourceStoreName=store.StoreName,
-                                 TergetStoreName=targetstore.StoreName,
+                                 TargetStoreName=targetstore.StoreName,
                                  TransferNo=storetransfer.TransferNo,
                                  UserName = user.FirstName + " " + user.LastName,                                 
                              };

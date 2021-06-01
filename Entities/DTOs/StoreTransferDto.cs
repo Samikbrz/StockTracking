@@ -13,7 +13,7 @@ namespace Entities.DTOs
         public string SourceStoreName { get; set; }
         public string SourceShelfName { get; set; }
         public string SourceDrawerName { get; set; }
-        public string TergetStoreName { get; set; }
+        public string TargetStoreName { get; set; }
         public string TargetShelfName { get; set; }
         public string TargetDrawerName { get; set; }
         public string UserName { get; set; }

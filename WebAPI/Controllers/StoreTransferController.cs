@@ -19,10 +19,22 @@ namespace WebAPI.Controllers
             _storeTransferService = storeTransferService;
         }
 
-        [HttpGet("getall")]
+        [HttpGet("getdetail")]
         public IActionResult GetList()
         {
-            var result = _storeTransferService.GetAll();
+            var result = _storeTransferService.GetDetail();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest(result);
+        }        
+
+        [HttpGet("getbyid")]
+        public IActionResult GetById(int id)
+        {
+            var result = _storeTransferService.GetById(id);
             if (result.Success)
             {
                 return Ok(result);

@@ -6,6 +6,7 @@ using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Business.Concrete
 {
@@ -31,6 +32,16 @@ namespace Business.Concrete
         public IDataResult<List<StoreTransfer>> GetAll()
         {
             return new SuccessDataResult<List<StoreTransfer>>(_storeTransferDal.GetAll(), Messages.ListedStoreTransfer);
+        }
+
+        public IDataResult<List<StoreTransfer>> GetById(int id)
+        {
+            return new SuccessDataResult<List<StoreTransfer>>(_storeTransferDal.GetAll(s=>s.Id==id));
+        }
+
+        public IDataResult<List<StoreTransferDto>> GetDetail()
+        {
+            return new SuccessDataResult<List<StoreTransferDto>>(_storeTransferDal.GetStoreTransferDetails());
         }
 
         public IResult Update(StoreTransfer storeTransfer)

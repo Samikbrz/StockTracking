@@ -13,7 +13,7 @@ namespace Entities.Concrete
         public int SourceStoreId { get; set; }
         public int SourceShelfId { get; set; }
         public int SourceDrawerId { get; set; }
-        public int TergetStoreId { get; set; }
+        public int TargetStoreId { get; set; }
         public int TargetShelfId { get; set; }
         public int TargetDrawerId { get; set; }
         public int UserId { get; set; }

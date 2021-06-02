@@ -23,6 +23,8 @@ namespace DataAccess.Concrete.EntityFramework
                              on stockstore.ShelfId equals shelf.Id
                              join drawer in context.Drawers
                              on stockstore.DrawerId equals drawer.Id
+                             join productAcceptance in context.ProductAcceptances
+                             on stockstore.ProductAcceptanceId equals productAcceptance.Id
                              select new StockStoreDto
                              {
                                  Id = stockstore.Id,
@@ -30,7 +32,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  Count=stockstore.Count,
                                  Currency=stockstore.Currency,
                                  DrawerName=drawer.DrawerName,
-                                 ProductName=stockstore.ProductName,
+                                 ProductName=productAcceptance.ProductName,
                                  ShelfName=shelf.ShelfName,
                                  StoreName=store.StoreName,
                                  UnitPrice=stockstore.UnitPrice

@@ -27,7 +27,11 @@ namespace DataAccess.Concrete.EntityFramework
                                  AcceptanceDate = productacceptance.AcceptanceDate,
                                  ProductRegistrationNumber = productacceptance.ProductRegistrationNumber,
                                  UserName = user.FirstName + " " + user.LastName,
-                                 CompanyName = company.CompanyName
+                                 CompanyName = company.CompanyName,
+                                 ProductName=productacceptance.ProductName,
+                                 UnitPrice=productacceptance.UnitPrice,
+                                 Count=productacceptance.Count,
+                                 TotalPrice=productacceptance.TotalPrice
                              };
                 return result.ToList();
             }

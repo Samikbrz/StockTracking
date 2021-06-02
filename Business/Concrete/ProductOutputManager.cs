@@ -6,6 +6,7 @@ using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Business.Concrete
 {
@@ -29,9 +30,14 @@ namespace Business.Concrete
             return new SuccessResult(Messages.DeletedProductOutput);
         }
 
-        public IDataResult<List<ProductOutput>> GetAll()
+        public IDataResult<List<ProductOutput>> GetById(int id)
         {
-            return new SuccessDataResult<List<ProductOutput>>(_productOutputDal.GetAll(), Messages.ListedProductOutput);
+            return new SuccessDataResult<List<ProductOutput>>(_productOutputDal.GetAll(p=>p.Id==id));
+        }
+
+        public IDataResult<List<ProductOutputDto>> GetDetail()
+        {
+            return new SuccessDataResult<List<ProductOutputDto>>(_productOutputDal.GetProductOutputDetails(), Messages.ListedProductOutput);
         }
 
         public IResult Update(ProductOutput productOutput)

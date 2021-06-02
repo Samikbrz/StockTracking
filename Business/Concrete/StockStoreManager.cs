@@ -6,6 +6,7 @@ using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
 namespace Business.Concrete
 {
@@ -28,9 +29,9 @@ namespace Business.Concrete
             return new SuccessResult(Messages.DeletedStockStore);
         }
 
-        public IDataResult<List<StockStore>> GetAll()
+        public IDataResult<List<StockStoreDto>> GetDetail()
         {
-            return new SuccessDataResult<List<StockStore>>(_stockStoreDal.GetAll(), Messages.ListedStockStores);
+            return new SuccessDataResult<List<StockStoreDto>>(_stockStoreDal.GetStockStoreDetails(), Messages.ListedStockStores);
         }
 
         public IResult Update(StockStore stockStore)

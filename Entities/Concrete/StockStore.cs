@@ -12,8 +12,9 @@ namespace Entities.Concrete
         public decimal UnitPrice { get; set; }
         public char Currency { get; set; } 
         public string Barcode { get; set; }       
-        public int Count { get; set; }
+        public int StoreId { get; set; }
         public int ShelfId { get; set; }
         public int DrawerId { get; set; }
+        public int Count { get; set; }
     }
 }

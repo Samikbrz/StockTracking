@@ -19,10 +19,10 @@ namespace WebAPI.Controllers
             _stockStoreService = stockStoreService;
         }
 
-        [HttpGet("getall")]
+        [HttpGet("getdetail")]
         public IActionResult GetList()
         {
-            var result = _stockStoreService.GetAll();
+            var result = _stockStoreService.GetDetail();
             if (result.Success)
             {
                 return Ok(result);

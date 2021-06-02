@@ -20,13 +20,25 @@ namespace WebAPI.Controllers
             _productOutputService = productOutputService;
         }
 
-        [HttpGet("getall")]
+        [HttpGet("getdetail")]
         public IActionResult GetList()
         {
-            var result = _productOutputService.GetAll();
+            var result = _productOutputService.GetDetail();
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
+            }
+
+            return BadRequest(result.Message);
+        }
+
+        [HttpGet("getbyid")]
+        public IActionResult GetById(int id)
+        {
+            var result = _productOutputService.GetById(id);
+            if (result.Success)
+            {
+                return Ok(result);
             }
 
             return BadRequest(result.Message);

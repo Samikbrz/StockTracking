@@ -26,10 +26,10 @@ namespace Business.Concrete
         {
             _productUnitDal = productUnitDal;
         }
-
-        [SecuredOperation("admin")]
+        
         [ValidationAspect(typeof(ProductUnitValidator))]
         [CacheRemoveAspect("IProductUnitService.Get")]
+        [SecuredOperation("admin")]
         public IResult Add(ProductUnit productUnit)
         {
             IResult result = BusinessRules.Run(CheckProductUnitNamaExist(productUnit.ProductUnitName));
@@ -40,13 +40,7 @@ namespace Business.Concrete
 
             _productUnitDal.Add(productUnit);
             return new SuccessResult(Messages.ProductUnitAdded);
-        }
-
-        [TransactionScopeAspect]
-        public IResult AddTransactionalTest(ProductUnit productUnit)
-        {
-            throw new NotImplementedException();
-        }
+        }        
 
         [CacheRemoveAspect("IProductUnitService.Get")]
         [SecuredOperation("admin")]

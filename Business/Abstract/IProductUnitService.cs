@@ -11,8 +11,7 @@ namespace Business.Abstract
         IDataResult<List<ProductUnit>> GetAll();
         IResult Add(ProductUnit productUnit);
         IResult Update(ProductUnit productUnit);
-        IResult Delete(ProductUnit productUnit);
-        IResult AddTransactionalTest(ProductUnit productUnit);
+        IResult Delete(ProductUnit productUnit);        
         IDataResult<List<ProductUnit>> GetById(int id);
     }
 }

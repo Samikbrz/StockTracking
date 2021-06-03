@@ -98,5 +98,11 @@ namespace Business.Constants
         public static string ListedUserOperationClaims;
         public static string UpdatedUserOperationClaims;
         public static string DeletedUserOperationClaims;
+
+        public static string OperationClaimAlreadyExist;
+        public static string AddedOperationClaim;
+        public static string DeletedOperationClaim;
+        public static string ListedOperationClaims;
+        public static string UpdatedOperationClaim;
     }
 }

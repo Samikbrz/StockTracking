@@ -93,6 +93,10 @@ namespace Business.Constants
         public static string AddedStoreTransfer="Ürün transferi oluşturuldu";
         public static string DeletedStoreTransfer="Ürün transferi silindi";
         public static string ListedStoreTransfer= "Ürün transferleri listelendi";
-        public static string UpdatedStoreTransfer="Ürün transferi güncellendi";        
+        public static string UpdatedStoreTransfer="Ürün transferi güncellendi";
+
+        public static string ListedUserOperationClaims;
+        public static string UpdatedUserOperationClaims;
+        public static string DeletedUserOperationClaims;
     }
 }

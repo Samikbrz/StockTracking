@@ -20,7 +20,8 @@ namespace Business.Constants
         public static string BrandsListed = "Markalar listelendi";
         public static string BrandDeleted = "Marka silindi";
         public static string UpdatedBrand = "Marka güncellendi";
-        
+        public static string BrandAlreadyExist = "Bu marka zaten mevcut!";
+
         public static string DeletedCompany = "Firma silindi";
         public static string ListedCompany = "Firmalar listelendi";
         public static string UpdatedCompany = "Firma güncellendi";

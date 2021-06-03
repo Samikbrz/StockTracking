@@ -18,6 +18,11 @@ namespace Business.Concrete
         }
         public IResult Add(Brand brand)
         {
+            var result = _brandDal.GetAll(b => b.BrandName == brand.BrandName);
+            if (result!=null)
+            {
+                return new ErrorResult(Messages.BrandAlreadyExist);
+            }
             _brandDal.Add(brand);
             return new SuccessResult(Messages.BrandAdded);
         }

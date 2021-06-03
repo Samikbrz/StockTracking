@@ -26,13 +26,13 @@ namespace Business.Concrete
         public IResult Delete(Company company)
         {
             _companyDal.Delete(company);
-            return new SuccessResult(Messages.CompanyDeleted);
+            return new SuccessResult(Messages.DeletedCompany);
         }
 
         public IDataResult<List<Company>> GetAll()
         {
             _companyDal.GetAll();
-            return new SuccessDataResult<List<Company>>(_companyDal.GetAll(), Messages.CompanyLsited);
+            return new SuccessDataResult<List<Company>>(_companyDal.GetAll(), Messages.ListedCompany);
         }
 
         public IDataResult<List<Company>> GetCompanyById(int id)

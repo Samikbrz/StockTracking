@@ -8,20 +8,23 @@ namespace Business.Constants
 {
     public static class Messages
     {
-        public static string ProductUnitAdded = "Added product unit";
-        public static string ProductUnitNameInvalid = "Product unit name invalid";
-        public static string ProductUnitsListed = "Product units listed";
-        public static string MaintenanceTime = "The system is currently in maintenance.";
-        public static string DeletedProductUnit = "";
-        public static string UpdatedProductUnit = "";
-        public static string ProductUnitNameAlreadyExist;
+        public static string ProductUnitAdded = "Ürün birimi eklendi";
+        public static string ProductUnitNameInvalid = "Ürün adı geçersiz";
+        public static string ProductUnitsListed = "Ürün birimleri listelendi";
+        public static string MaintenanceTime = "Sistem bakımda";
+        public static string DeletedProductUnit = "Ürün birimi silindi";
+        public static string UpdatedProductUnit = "Ürün birimi güncellendi";
+        public static string ProductUnitNameAlreadyExist="Bu ürün  birimi zaten mevcut";
 
-        public static string BrandAdded = "Added brand";
-        public static string BrandsListed = "";
-        public static string BrandDeleted = "";
-        public static string UpdatedBrand = "";
-        public static string CompanyDeleted = "";
-        public static string CompanyLsited = "";
+        public static string BrandAdded = "Marka eklendi";
+        public static string BrandsListed = "Markalar listelendi";
+        public static string BrandDeleted = "Marka silindi";
+        public static string UpdatedBrand = "Marka güncellendi";
+        
+        public static string DeletedCompany = "Firma silindi";
+        public static string ListedCompany = "Firmalar listelendi";
+        public static string UpdatedCompany = "Firma güncellendi";
+        public static string AddedCompany = "Firma eklendi";
 
         public static string AuthorizationDenied = "Bu işlemi yapmak için yetkiniz yok!";
         public static string UserRegistered = "Kayıt işlemi yapıldı";
@@ -31,66 +34,64 @@ namespace Business.Constants
         public static string SuccessfulLogin="Giriş Yapıldı";
         public static string PasswordError="Şifre hatalı!";
 
-        public static string DetetedDrawer="";
-        public static string DrawerAdded="";
-        public static string DrawerListed="";
-        public static string DrawerUpdated="";
+        public static string DeletedDrawer="Çekmece silindi";
+        public static string DrawerAdded="Çekmece eklendi";
+        public static string DrawerListed="Çekmece listelendi";
+        public static string DrawerUpdated="Çekmece güncellendi";
 
         public static string ExchangeRateAdded="";
         public static string ExchangeRateDeleted="";
-        public static string ExchangeRateListed="";
+        public static string ExchangeRateListed="Para birimleri listelendi";
         public static string ExchangeRateUpdated="";
 
-        public static string AddedModel="";
-        public static string DeletedModel="";
-        public static string ListedModel="";
-        public static string UpdatedModel="";
+        public static string AddedModel="Model eklendi";
+        public static string DeletedModel="Model silindi";
+        public static string ListedModel="Modeller listelendi";
+        public static string UpdatedModel="Model güncellendi";
 
-        public static string AddedProductAcceptance="";
-        public static string DeletedProductAcceptance="";
-        public static string ListedProductAcceptance="";
-        public static string UpdatedProductAcceptance="";
+        public static string AddedProductAcceptance="Ürün kabulü oluşturuldu.";
+        public static string DeletedProductAcceptance= "Ürün kabulü silindi.";
+        public static string ListedProductAcceptance= "Ürün kabulleri listelendi.";
+        public static string UpdatedProductAcceptance= "Ürün kabulü güncellendi.";
 
-        public static string AddedProductOutput="";
-        public static string DeletedProductOutput="";
-        public static string ListedProductOutput="";
-        public static string UpdatedProductOutput="";
+        public static string AddedProductOutput="Ürün çıkışı eklendi";
+        public static string DeletedProductOutput= "Ürün çıkışı silindi";
+        public static string ListedProductOutput= "Ürün çıkışları listelendi";
+        public static string UpdatedProductOutput= "Ürün çıkışı güncellendi";
 
-        public static string AddedProposal="";
-        public static string DeletedProposal="";
-        public static string ListedProposal="";
-        public static string UpdatedProposal="";
+        public static string AddedProposal="Teklif oluşturuldu";
+        public static string DeletedProposal="Teklif silindi";
+        public static string ListedProposal="Teklifler listelendi";
+        public static string UpdatedProposal="Teklif güncellendi";
 
-        public static string AddedShelf;
-        public static string DeletedShelf;
-        public static string UpdatedShelf;
-        public static string ListedShelves;
+        public static string AddedShelf="Raf eklendi";
+        public static string DeletedShelf = "Raf silindi";
+        public static string UpdatedShelf = "Raf güncellendi";
+        public static string ListedShelves = "Raflar listelendi";
 
-        public static string UpdatedStock;
-        public static string ListedStock;
-        public static string DeletedStock;
-        public static string AddedStock;
+        public static string UpdatedStock="Stok güncellendi";
+        public static string ListedStock="Stoklar listelendi";
+        public static string DeletedStock="Stok silindi";
+        public static string AddedStock="Stok eklendi";
 
-        public static string AddedStockKind;
-        public static string DeletedStockKind;
-        public static string ListedStockKind;
-        public static string UpdatedStockKind;
+        public static string AddedStockKind="Stok türü eklendi";
+        public static string DeletedStockKind = "Stok türü silindi";
+        public static string ListedStockKind = "Stok türleri listelendi";
+        public static string UpdatedStockKind = "Stok türü güncellendi";
 
-        public static string AddedStockStore;
-        public static string DeletedStockStore;
-        public static string ListedStockStores;
-        public static string UpdatedStockStore;
+        public static string AddedStockStore="Depo stok dağılımı eklendi";
+        public static string DeletedStockStore = "Depo stok dağılımı silindi";
+        public static string ListedStockStores = "Depo stok dağılımları listelendi";
+        public static string UpdatedStockStore = "Depo stok dağılımı güncellendi";
 
-        public static string AddedStore;
-        public static string DeletedStore;
-        public static string ListedStore;
-        public static string UpdatedStore;
+        public static string AddedStore="Depo eklendi";
+        public static string DeletedStore="Depo Silindi";
+        public static string ListedStore="Depolar listelendi";
+        public static string UpdatedStore="Depo güncellendi";
 
-        public static string AddedStoreTransfer;
-        public static string DeletedStoreTransfer;
-        public static string ListedStoreTransfer="";
-        public static string UpdatedStoreTransfer;
-
-        public static string UpdatedCompany="Firma güncellendi";
+        public static string AddedStoreTransfer="Ürün transferi oluşturuldu";
+        public static string DeletedStoreTransfer="Ürün transferi silindi";
+        public static string ListedStoreTransfer= "Ürün transferleri listelendi";
+        public static string UpdatedStoreTransfer="Ürün transferi güncellendi";        
     }
 }

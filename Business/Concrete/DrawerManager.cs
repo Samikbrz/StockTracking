@@ -26,7 +26,7 @@ namespace Business.Concrete
         public IResult Delete(Drawer drawer)
         {
             _drawerDal.Delete(drawer);
-            return new SuccessResult(Messages.DetetedDrawer);
+            return new SuccessResult(Messages.DeletedDrawer);
         }
 
         public IDataResult<List<Drawer>> GetAll()

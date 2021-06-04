@@ -9,6 +9,6 @@ namespace DataAccess.Abstract
 {
     public interface IDrawerDal: IEntityRepository<Drawer>
     {
-        List<DrawerDto> GetShelfDetails();
+        List<DrawerDto> GetDrawerDetails();
     }
 }

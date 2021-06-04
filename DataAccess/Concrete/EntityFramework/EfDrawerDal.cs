@@ -12,7 +12,7 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfDrawerDal : ImEntityRepositoryBase<Drawer, StockTrackingContext>, IDrawerDal
     {
-        public List<DrawerDto> GetShelfDetails()
+        public List<DrawerDto> GetDrawerDetails()
         {
             using (StockTrackingContext context = new StockTrackingContext())
             {

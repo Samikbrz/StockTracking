@@ -41,7 +41,7 @@ namespace Business.Concrete
 
         public IDataResult<List<DrawerDto>> GetDetail()
         {
-            return new SuccessDataResult<List<DrawerDto>>(_drawerDal.GetShelfDetails(), Messages.DrawerListed);
+            return new SuccessDataResult<List<DrawerDto>>(_drawerDal.GetDrawerDetails(), Messages.DrawerListed);
         }
 
         public IResult Update(Drawer drawer)

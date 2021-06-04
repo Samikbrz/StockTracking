@@ -15,6 +15,7 @@ namespace Entities.DTOs
         public string ShelfName { get; set; }
         public string DrawerName { get; set; }
         public string ProductName { get; set; }
+        public string ProductUnitName { get; set; }
         public int Count { get; set; }
     }
 }

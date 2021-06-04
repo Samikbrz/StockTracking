@@ -22,9 +22,10 @@ namespace Business.Concrete
             return new SuccessDataResult<List<OperationClaim>>(_userDal.GetClaims(user));
         }
 
-        public void Add(User user)
+        public IResult Add(User user)
         {
             _userDal.Add(user);
+            return new SuccessResult(); 
         }
 
         public User GetByMail(string email)
@@ -40,6 +41,23 @@ namespace Business.Concrete
         public IDataResult<List<User>> GetByEmail(string email)
         {
             return new SuccessDataResult<List<User>>(_userDal.GetAll(e=>e.Email==email));
+        }
+
+        public IResult Update(User user)
+        {
+            _userDal.Update(user);
+            return new SuccessResult();
+        }
+
+        public IResult Delete(User user)
+        {
+            _userDal.Delete(user);
+            return new SuccessResult();
+        }
+
+        public IDataResult<List<User>> GetById(int id)
+        {
+            return new SuccessDataResult<List<User>>(_userDal.GetAll(e => e.Id == id));
         }
     }
 }

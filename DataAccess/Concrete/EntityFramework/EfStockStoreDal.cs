@@ -25,6 +25,8 @@ namespace DataAccess.Concrete.EntityFramework
                              on stockstore.DrawerId equals drawer.Id
                              join productAcceptance in context.ProductAcceptances
                              on stockstore.ProductAcceptanceId equals productAcceptance.Id
+                             join productunit in context.ProductUnits
+                             on stockstore.ProductUnitId equals productunit.Id
                              select new StockStoreDto
                              {
                                  Id = stockstore.Id,
@@ -35,7 +37,8 @@ namespace DataAccess.Concrete.EntityFramework
                                  ProductName=productAcceptance.ProductName,
                                  ShelfName=shelf.ShelfName,
                                  StoreName=store.StoreName,
-                                 UnitPrice=stockstore.UnitPrice
+                                 UnitPrice=stockstore.UnitPrice,
+                                 ProductUnitName=productunit.ProductUnitName
                              };
                 return result.ToList();
             }

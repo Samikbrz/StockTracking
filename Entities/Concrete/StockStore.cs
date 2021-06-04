@@ -11,7 +11,8 @@ namespace Entities.Concrete
         public int ProductAcceptanceId { get; set; }
         public decimal UnitPrice { get; set; }
         public string Currency { get; set; } 
-        public string Barcode { get; set; }       
+        public string Barcode { get; set; }
+        public int ProductUnitId { get; set; }
         public int StoreId { get; set; }
         public int ShelfId { get; set; }
         public int DrawerId { get; set; }

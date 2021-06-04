@@ -51,14 +51,12 @@ namespace Business.Concrete
         }
 
         [CacheAspect]
-        [PerformanceAspect(5)]
-        [SecuredOperation("admin")]
+        [PerformanceAspect(5)]        
         public IDataResult<List<ProductUnit>> GetAll()
         {
             return new SuccessDataResult<List<ProductUnit>>(_productUnitDal.GetAll(), Messages.ProductUnitsListed);
         }
-
-        [SecuredOperation("admin")]
+                
         public IDataResult<List<ProductUnit>> GetById(int id)
         {
             return new SuccessDataResult<List<ProductUnit>>(_productUnitDal.GetAll(x => x.Id == id));

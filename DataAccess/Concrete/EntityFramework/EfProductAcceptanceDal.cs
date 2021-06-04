@@ -31,7 +31,8 @@ namespace DataAccess.Concrete.EntityFramework
                                  ProductName=productacceptance.ProductName,
                                  UnitPrice=productacceptance.UnitPrice,
                                  Count=productacceptance.Count,
-                                 TotalPrice=productacceptance.TotalPrice
+                                 TotalPrice=productacceptance.TotalPrice,
+                                 Barcode=productacceptance.Barcode
                              };
                 return result.ToList();
             }

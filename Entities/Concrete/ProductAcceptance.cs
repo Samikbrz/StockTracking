@@ -9,6 +9,7 @@ namespace Entities.Concrete
     {
         public int Id { get; set; }
         public string ProductName { get; set; }
+        public string Barcode { get; set; }
         public string ProductRegistrationNumber { get; set; }
         public DateTime AcceptanceDate { get; set; }  
         public int Count { get; set; }

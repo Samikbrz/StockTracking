@@ -99,10 +99,12 @@ namespace Business.Constants
         public static string UpdatedUserOperationClaims;
         public static string DeletedUserOperationClaims;
 
-        public static string OperationClaimAlreadyExist;
+        public static string OperationClaimAlreadyExist="Rol zaten mevcut!";
         public static string AddedOperationClaim;
         public static string DeletedOperationClaim;
         public static string ListedOperationClaims;
         public static string UpdatedOperationClaim;
+
+        public static string ProductAlreadyExist="Bu ürün depoya zaten yerleştirilmiş!";
     }
 }

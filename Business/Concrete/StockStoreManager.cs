@@ -19,6 +19,11 @@ namespace Business.Concrete
         }
         public IResult Add(StockStore stockStore)
         {
+            var result = _stockStoreDal.GetAll(p => p.ProductAcceptanceId == stockStore.ProductAcceptanceId);
+            if (result!=null)
+            {
+                return new ErrorResult(Messages.ProductAlreadyExist);
+            }
             _stockStoreDal.Add(stockStore);
             return new SuccessResult(Messages.AddedStockStore);
         }

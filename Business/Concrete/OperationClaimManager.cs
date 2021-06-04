@@ -19,7 +19,7 @@ namespace Business.Concrete
         public IResult Add(OperationClaim operationClaim)
         {
             var result = _operationClaimDal.GetAll(o => o.Name == operationClaim.Name);
-            if (result!=null)
+            if (result.Count!=0)
             {
                 return new ErrorResult(Messages.OperationClaimAlreadyExist);
             }
@@ -29,7 +29,7 @@ namespace Business.Concrete
 
         public IResult Delete(OperationClaim operationClaim)
         {
-            _operationClaimDal.Add(operationClaim);
+            _operationClaimDal.Delete(operationClaim);
             return new SuccessResult(Messages.DeletedOperationClaim);
         }
 
@@ -45,7 +45,7 @@ namespace Business.Concrete
 
         public IResult Update(OperationClaim operationClaim)
         {
-            _operationClaimDal.Add(operationClaim);
+            _operationClaimDal.Update(operationClaim);
             return new SuccessResult(Messages.UpdatedOperationClaim);
         }
     }

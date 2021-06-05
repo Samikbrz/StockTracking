@@ -21,14 +21,20 @@ namespace DataAccess.Concrete.EntityFramework
                              on productoutput.CompanyId equals company.Id
                              join user in context.Users
                              on productoutput.UserId equals user.Id
+                             join productacceptance in context.ProductAcceptances
+                             on productoutput.ProductAcceptanceId equals productacceptance.Id
                              select new ProductOutputDto
                              {
                                  Id = productoutput.Id,
                                  Date=productoutput.Date,
                                  ExitNumber=productoutput.ExitNumber,
                                  TotalPrice=productoutput.TotalPrice,
-                                 UserName=user.FirstName+""+user.LastName,
-                                 CompanyName = company.CompanyName
+                                 UserName=user.FirstName+" "+user.LastName,
+                                 CompanyName = company.CompanyName,
+                                 Barcode=productacceptance.Barcode,
+                                 Count=productoutput.Count,
+                                 ProductName=productacceptance.ProductName,
+                                 UnitPrice=productoutput.UnitPrice
                              };
                 return result.ToList();
             }

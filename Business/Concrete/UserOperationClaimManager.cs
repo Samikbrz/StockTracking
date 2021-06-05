@@ -20,6 +20,11 @@ namespace Business.Concrete
         }
         public IResult Add(UserOperationClaim userOperationClaim)
         {
+            var result = _userOperaitonClaimDal.GetAll(u => u.UserId == userOperationClaim.UserId && u.OperationClaimId == userOperationClaim.OperationClaimId);
+            if (result.Count!=0)
+            {
+                return new ErrorResult(Messages.UserOperationClaimAlreadyExist);
+            }
             _userOperaitonClaimDal.Add(userOperationClaim);
             return new SuccessResult(Messages.ListedUserOperationClaims);
         }
@@ -42,7 +47,7 @@ namespace Business.Concrete
 
         public IResult Update(UserOperationClaim userOperationClaim)
         {
-            _userOperaitonClaimDal.Add(userOperationClaim);
+            _userOperaitonClaimDal.Update(userOperationClaim);
             return new SuccessResult(Messages.UpdatedUserOperationClaims);
         }
     }

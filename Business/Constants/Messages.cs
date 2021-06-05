@@ -106,5 +106,6 @@ namespace Business.Constants
         public static string UpdatedOperationClaim;
 
         public static string ProductAlreadyExist="Bu ürün depoya zaten yerleştirilmiş!";
+        public static string UserOperationClaimAlreadyExist="Kullanıcı bu yetkiye zaten sahip!";
     }
 }

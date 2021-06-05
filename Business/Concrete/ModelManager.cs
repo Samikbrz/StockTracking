@@ -19,6 +19,11 @@ namespace Business.Concrete
         }
         public IResult Add(Model model)
         {
+            var result = _modelDal.GetAll(m => m.ModelName == model.ModelName);
+            if (result.Count!=0)
+            {
+                return new ErrorResult(Messages.ModelAlreadyExist);
+            }
            _modelDal.Add(model);
            return new SuccessResult(Messages.AddedModel);
         }

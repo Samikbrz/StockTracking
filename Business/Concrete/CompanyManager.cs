@@ -19,6 +19,11 @@ namespace Business.Concrete
         }
         public IResult Add(Company company)
         {
+            var result = _companyDal.GetAll(c => c.CompanyName == company.CompanyName);
+            if (result.Count!=0)
+            {
+                return new ErrorResult(Messages.CompanyAlreadyExist);
+            }
             _companyDal.Add(company);
             return new SuccessResult(Messages.ProductUnitAdded);
         }

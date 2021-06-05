@@ -99,13 +99,20 @@ namespace Business.Constants
         public static string UpdatedUserOperationClaims;
         public static string DeletedUserOperationClaims;
 
-        public static string OperationClaimAlreadyExist="Rol zaten mevcut!";
-        public static string AddedOperationClaim;
-        public static string DeletedOperationClaim;
-        public static string ListedOperationClaims;
-        public static string UpdatedOperationClaim;
+        public static string OperationClaimAlreadyExist="Yetki zaten mevcut!";
+        public static string AddedOperationClaim= "Yetki eklendi";
+        public static string DeletedOperationClaim= "Yetki silindi";
+        public static string ListedOperationClaims = "Yetkiler listelendi";
+        public static string UpdatedOperationClaim = "Yetki güncellendi";
 
         public static string ProductAlreadyExist="Bu ürün depoya zaten yerleştirilmiş!";
         public static string UserOperationClaimAlreadyExist="Kullanıcı bu yetkiye zaten sahip!";
+        public static string CompanyAlreadyExist="Bu şirket zaten mevcut!";
+        public static string DrawerAlreadyExist="Bu çekmece zaten mevcut!";
+
+        public static string CountError="Girilen adet mevcut adetten büyük olamaz!";
+        public static string ModelAlreadyExist ="Model zaten mevcut!";
+        public static string ShelfAlreadyExist="Bu raf zaten mevcut";
+        public static string StoreAlreadyExist="Bu depo zaten mevcut";
     }
 }

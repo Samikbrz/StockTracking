@@ -19,6 +19,11 @@ namespace Business.Concrete
         }
         public IResult Add(Drawer drawer)
         {
+            var result = _drawerDal.GetAll(d => d.DrawerName == drawer.DrawerName);
+            if (result.Count!=0)
+            {
+                return new ErrorResult(Messages.DrawerAlreadyExist);
+            }
             _drawerDal.Add(drawer);
             return new SuccessResult(Messages.DrawerAdded);
         }

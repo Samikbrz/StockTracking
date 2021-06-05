@@ -18,6 +18,11 @@ namespace Business.Concrete
         }
         public IResult Add(Store store)
         {
+            var resut = _storeDal.GetAll(s => s.StoreName == store.StoreName);
+            if (resut.Count!=0)
+            {
+                return new ErrorResult(Messages.StoreAlreadyExist);
+            }
             _storeDal.Add(store);
             return new SuccessResult(Messages.AddedStore);
         }

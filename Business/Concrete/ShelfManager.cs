@@ -25,6 +25,11 @@ namespace Business.Concrete
 
         public IResult Delete(Shelf shelf)
         {
+            var result = _shelfDal.GetAll(s => s.ShelfName == shelf.ShelfName);
+            if (result.Count!=0)
+            {
+                return new ErrorResult(Messages.ShelfAlreadyExist);
+            }
             _shelfDal.Delete(shelf);
             return new SuccessResult(Messages.DeletedShelf);
         }

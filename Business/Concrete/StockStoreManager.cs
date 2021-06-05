@@ -34,6 +34,11 @@ namespace Business.Concrete
             return new SuccessResult(Messages.DeletedStockStore);
         }
 
+        public IDataResult<List<StockStore>> GetById(int id)
+        {
+            return new SuccessDataResult<List<StockStore>>(_stockStoreDal.GetAll(s=>s.Id==id));
+        }
+
         public IDataResult<List<StockStoreDto>> GetDetail()
         {
             return new SuccessDataResult<List<StockStoreDto>>(_stockStoreDal.GetStockStoreDetails(), Messages.ListedStockStores);

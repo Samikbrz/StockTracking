@@ -10,6 +10,7 @@ namespace Business.Abstract
     public interface IStockStoreService
     {
         IDataResult<List<StockStoreDto>> GetDetail();
+        IDataResult<List<StockStore>> GetById(int id);
         IResult Add(StockStore stockStore);
         IResult Update(StockStore stockStore);
         IResult Delete(StockStore stockStore);

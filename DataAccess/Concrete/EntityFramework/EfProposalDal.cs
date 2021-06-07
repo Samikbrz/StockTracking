@@ -30,7 +30,8 @@ namespace DataAccess.Concrete.EntityFramework
                                 ProposalNo=proposal.ProposalNo,
                                 UserName=user.FirstName+" "+user.LastName,   
                                 CompanyName=company.CompanyName,
-                                Barcode=stockstore.Barcode
+                                Barcode=stockstore.Barcode,
+                                Count=proposal.Count
                              };
                 return result.ToList();
             }

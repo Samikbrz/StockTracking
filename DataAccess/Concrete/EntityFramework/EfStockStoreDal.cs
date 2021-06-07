@@ -31,15 +31,15 @@ namespace DataAccess.Concrete.EntityFramework
                              {
                                  Id = stockstore.Id,
                                  Barcode = stockstore.Barcode,
-                                 Count=stockstore.Count,
-                                 Currency=stockstore.Currency,
+                                 Count=stockstore.Count,                                 
                                  DrawerName=drawer.DrawerName,
                                  ProductName=productAcceptance.ProductName,
                                  ShelfName=shelf.ShelfName,
                                  StoreName=store.StoreName,
                                  UnitPrice=stockstore.UnitPrice,
                                  ProductUnitName=productunit.ProductUnitName,
-                                 ProductAcceptanceId=productAcceptance.Id
+                                 ProductAcceptanceId=productAcceptance.Id,
+                                 
                              };
                 return result.ToList();
             }

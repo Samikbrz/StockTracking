@@ -13,5 +13,7 @@ namespace Entities.DTOs
         public string UserName { get; set; }
         public string CompanyName { get; set; }        
         public string Barcode { get; set; }
+        public int Count { get; set; }
+        public decimal TotolPrice { get; set; }
     }
 }

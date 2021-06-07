@@ -9,8 +9,7 @@ namespace Entities.DTOs
     {
         public int Id { get; set; }     
         public int ProductAcceptanceId { get; set; }         
-        public decimal UnitPrice { get; set; }
-        public string Currency { get; set; }
+        public decimal UnitPrice { get; set; }       
         public string Barcode { get; set; }
         public string StoreName { get; set; }
         public string ShelfName { get; set; }

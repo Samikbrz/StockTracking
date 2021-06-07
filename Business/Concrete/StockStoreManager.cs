@@ -20,7 +20,7 @@ namespace Business.Concrete
         public IResult Add(StockStore stockStore)
         {
             var result = _stockStoreDal.GetAll(p => p.ProductAcceptanceId == stockStore.ProductAcceptanceId);
-            if (result!=null)
+            if (result.Count!=0)
             {
                 return new ErrorResult(Messages.ProductAlreadyExist);
             }
@@ -37,6 +37,11 @@ namespace Business.Concrete
         public IDataResult<List<StockStore>> GetById(int id)
         {
             return new SuccessDataResult<List<StockStore>>(_stockStoreDal.GetAll(s=>s.Id==id));
+        }
+
+        public IDataResult<List<StockStore>> GetByProductAcceptanceId(int id)
+        {
+            return new SuccessDataResult<List<StockStore>>(_stockStoreDal.GetAll(s => s.ProductAcceptanceId == id));
         }
 
         public IDataResult<List<StockStoreDto>> GetDetail()

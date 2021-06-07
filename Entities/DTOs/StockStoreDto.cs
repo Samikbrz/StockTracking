@@ -7,7 +7,8 @@ namespace Entities.DTOs
 {
     public class StockStoreDto : IDto
     {
-        public int Id { get; set; }       
+        public int Id { get; set; }     
+        public int ProductAcceptanceId { get; set; }         
         public decimal UnitPrice { get; set; }
         public string Currency { get; set; }
         public string Barcode { get; set; }

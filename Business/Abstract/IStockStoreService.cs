@@ -11,6 +11,7 @@ namespace Business.Abstract
     {
         IDataResult<List<StockStoreDto>> GetDetail();
         IDataResult<List<StockStore>> GetById(int id);
+        IDataResult<List<StockStore>> GetByProductAcceptanceId(int id);
         IResult Add(StockStore stockStore);
         IResult Update(StockStore stockStore);
         IResult Delete(StockStore stockStore);

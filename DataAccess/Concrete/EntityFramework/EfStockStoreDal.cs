@@ -38,7 +38,8 @@ namespace DataAccess.Concrete.EntityFramework
                                  ShelfName=shelf.ShelfName,
                                  StoreName=store.StoreName,
                                  UnitPrice=stockstore.UnitPrice,
-                                 ProductUnitName=productunit.ProductUnitName
+                                 ProductUnitName=productunit.ProductUnitName,
+                                 ProductAcceptanceId=productAcceptance.Id
                              };
                 return result.ToList();
             }

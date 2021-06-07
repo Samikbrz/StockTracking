@@ -11,6 +11,7 @@ namespace Entities.DTOs
         public int ProposalNo { get; set; }
         public DateTime Date { get; set; }
         public string UserName { get; set; }
-        public string CompanyName { get; set; }
+        public string CompanyName { get; set; }        
+        public string Barcode { get; set; }
     }
 }

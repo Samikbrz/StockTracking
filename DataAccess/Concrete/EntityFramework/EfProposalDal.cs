@@ -21,13 +21,16 @@ namespace DataAccess.Concrete.EntityFramework
                              on proposal.UserId equals user.Id
                              join company in context.Companies
                              on proposal.CompanyId equals company.Id
+                             join stockstore in context.StockStores
+                             on proposal.StockStoreId equals stockstore.Id
                              select new ProposalDto
                              {
                                 Id = proposal.Id,
                                 Date=proposal.Date,
                                 ProposalNo=proposal.ProposalNo,
                                 UserName=user.FirstName+" "+user.LastName,   
-                                CompanyName=company.CompanyName
+                                CompanyName=company.CompanyName,
+                                Barcode=stockstore.Barcode
                              };
                 return result.ToList();
             }

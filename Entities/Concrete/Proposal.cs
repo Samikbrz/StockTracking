@@ -12,5 +12,6 @@ namespace Entities.Concrete
         public DateTime Date { get; set; }       
         public int UserId { get; set; }
         public int CompanyId { get; set; }
+        public int StockStoreId { get; set; }
     }
 }

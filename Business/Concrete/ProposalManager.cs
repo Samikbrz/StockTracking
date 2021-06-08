@@ -14,14 +14,21 @@ namespace Business.Concrete
     public class ProposalManager : IProposalService
     {
         private IProposalDal _proposalDal;
-        public ProposalManager(IProposalDal proposalDal)
+        private IStockStoreDal _stockStoreDal;
+        public ProposalManager(IProposalDal proposalDal,IStockStoreDal stockStoreDal)
         {
             _proposalDal = proposalDal;
+            _stockStoreDal= stockStoreDal;
         }
 
         [SecuredOperation("admin")]
         public IResult Add(Proposal proposal)
         {
+            var result = _stockStoreDal.GetAll(p => p.Barcode != proposal.Barcode);
+            if (result.Count>0)
+            {
+                return new ErrorResult(Messages.BarcodeNotFound);
+            }
             _proposalDal.Add(proposal);
             return new SuccessResult(Messages.AddedProposal);
         }

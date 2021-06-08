@@ -114,5 +114,8 @@ namespace Business.Constants
         public static string ModelAlreadyExist ="Model zaten mevcut!";
         public static string ShelfAlreadyExist="Bu raf zaten mevcut";
         public static string StoreAlreadyExist="Bu depo zaten mevcut";
+
+        public static string BarcodeNotFound="Bu barkodda bir ürün bulunamadı!";
+        public static string StoreNotDeleted="Bu depoya bağlı ürünler var silemezsiniz!";
     }
 }

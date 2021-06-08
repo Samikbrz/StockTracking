@@ -13,9 +13,11 @@ namespace Business.Concrete
     public class StoreManager : IStoreService
     {
         private IStoreDal _storeDal;
-        public StoreManager(IStoreDal storeDal)
+        private IStockStoreDal _stockStoreDal;
+        public StoreManager(IStoreDal storeDal,IStockStoreDal stockStoreDal)
         {
             _storeDal = storeDal;
+            _stockStoreDal = stockStoreDal;
         }
 
         [SecuredOperation("admin")]
@@ -33,6 +35,11 @@ namespace Business.Concrete
         [SecuredOperation("admin")]
         public IResult Delete(Store store)
         {
+            var result = _stockStoreDal.GetAll(s => s.StoreId == store.Id);
+            if (result.Count>0)
+            {
+                return new ErrorResult(Messages.StoreNotDeleted);
+            }
             _storeDal.Delete(store);
             return new SuccessResult(Messages.DeletedStore);
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -17,6 +18,8 @@ namespace Business.Concrete
         {
             _drawerDal = drawerDal;
         }
+
+        [SecuredOperation("admin")]
         public IResult Add(Drawer drawer)
         {
             var result = _drawerDal.GetAll(d => d.DrawerName == drawer.DrawerName);
@@ -28,6 +31,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.DrawerAdded);
         }
 
+        [SecuredOperation("admin")]
         public IResult Delete(Drawer drawer)
         {
             _drawerDal.Delete(drawer);
@@ -49,6 +53,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<DrawerDto>>(_drawerDal.GetDrawerDetails(), Messages.DrawerListed);
         }
 
+        [SecuredOperation("admin,employee")]
         public IResult Update(Drawer drawer)
         {
             _drawerDal.Update(drawer);

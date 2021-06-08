@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -17,6 +18,7 @@ namespace Business.Concrete
         {
             _companyDal = companyDal;
         }
+        [SecuredOperation("admin")]
         public IResult Add(Company company)
         {
             var result = _companyDal.GetAll(c => c.CompanyName == company.CompanyName);
@@ -28,6 +30,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.ProductUnitAdded);
         }
 
+        [SecuredOperation("admin")]
         public IResult Delete(Company company)
         {
             _companyDal.Delete(company);
@@ -45,6 +48,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Company>>(_companyDal.GetAll(p => p.Id==id));
         }
 
+        [SecuredOperation("admin,empolyee")]
         public IResult Update(Company company)
         {
             _companyDal.Update(company);

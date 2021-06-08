@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -17,6 +18,8 @@ namespace Business.Concrete
         {
             _modelDal = modelDal;
         }
+
+        [SecuredOperation("admin")]
         public IResult Add(Model model)
         {
             var result = _modelDal.GetAll(m => m.ModelName == model.ModelName);
@@ -28,6 +31,7 @@ namespace Business.Concrete
            return new SuccessResult(Messages.AddedModel);
         }
 
+        [SecuredOperation("admin")]
         public IResult Delete(Model model)
         {
            _modelDal.Delete(model);
@@ -49,6 +53,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ModelDto>>(_modelDal.GetModelDetails(), Messages.ListedModel);
         }
 
+        [SecuredOperation("admin,employee")]
         public IResult Update(Model model)
         {
             _modelDal.Update(model);

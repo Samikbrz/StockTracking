@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -16,12 +17,15 @@ namespace Business.Concrete
         {
             _exchangeRateDal = exchangeRateDal;
         }
+
+        [SecuredOperation("admin")]
         public IResult Add(ExchangeRate exchangeRate)
         {
             _exchangeRateDal.Add(exchangeRate);
             return new SuccessResult(Messages.ExchangeRateAdded);
         }
 
+        [SecuredOperation("admin")]
         public IResult Delete(ExchangeRate exchangeRate)
         {
            _exchangeRateDal.Delete(exchangeRate);
@@ -33,6 +37,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ExchangeRate>>(_exchangeRateDal.GetAll(), Messages.ExchangeRateListed);
         }
 
+        [SecuredOperation("admin,employee")]
         public IResult Update(ExchangeRate exchangeRate)
         {
            _exchangeRateDal.Update(exchangeRate);

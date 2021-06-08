@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -17,12 +18,15 @@ namespace Business.Concrete
         {
             _proposalDal = proposalDal;
         }
+
+        [SecuredOperation("admin")]
         public IResult Add(Proposal proposal)
         {
             _proposalDal.Add(proposal);
             return new SuccessResult(Messages.AddedProposal);
         }
 
+        [SecuredOperation("admin")]
         public IResult Delete(Proposal proposal)
         {
             _proposalDal.Delete(proposal);
@@ -44,6 +48,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ProposalDto>>(_proposalDal.GetProposalDetails(), Messages.ListedProposal);
         }
 
+        [SecuredOperation("admin")]
         public IResult Update(Proposal proposal)
         {
             _proposalDal.Update(proposal);

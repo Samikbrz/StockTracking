@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -17,12 +18,15 @@ namespace Business.Concrete
         {
             _storeTransferDal = storeTransferDal;
         }
+
+        [SecuredOperation("admin")]
         public IResult Add(StoreTransfer storeTransfer)
         {
             _storeTransferDal.Add(storeTransfer);
             return new SuccessResult(Messages.AddedStoreTransfer);
         }
 
+        [SecuredOperation("admin")]
         public IResult Delete(StoreTransfer storeTransfer)
         {
             _storeTransferDal.Delete(storeTransfer);
@@ -44,6 +48,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<StoreTransferDto>>(_storeTransferDal.GetStoreTransferDetails());
         }
 
+        [SecuredOperation("admin,employee")]
         public IResult Update(StoreTransfer storeTransfer)
         {
             _storeTransferDal.Update(storeTransfer);

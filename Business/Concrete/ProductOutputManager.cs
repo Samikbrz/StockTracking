@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -22,6 +23,7 @@ namespace Business.Concrete
             _stockStoreDal = stockStoreDal;
         }
 
+        [SecuredOperation("admin")]
         public IResult Add(ProductOutput productOutput)
         {
             List<StockStore> products = _stockStoreDal.GetAll(p => p.Id == productOutput.ProductAcceptanceId);
@@ -53,6 +55,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.AddedProductOutput);
         }
 
+        [SecuredOperation("admin")]
         public IResult Delete(ProductOutput productOutput)
         {
             _productOutputDal.Delete(productOutput);
@@ -69,6 +72,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ProductOutputDto>>(_productOutputDal.GetProductOutputDetails(), Messages.ListedProductOutput);
         }
 
+        [SecuredOperation("admin,employee")]
         public IResult Update(ProductOutput productOutput)
         {
             _productOutputDal.Update(productOutput);

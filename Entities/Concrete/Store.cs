@@ -9,6 +9,7 @@ namespace Entities.Concrete
     {
         public int Id { get; set; }
         public string StoreName { get; set; }
-        public string IsSalesStore { get; set; }        
+        public string IsSalesStore { get; set; }
+        public int CriticalLevel { get; set; }
     }
 }

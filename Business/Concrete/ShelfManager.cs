@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -17,12 +18,15 @@ namespace Business.Concrete
         {
             _shelfDal = shelfDal;
         }
+
+        [SecuredOperation("admin")]
         public IResult Add(Shelf shelf)
         {
             _shelfDal.Add(shelf);
             return new SuccessResult(Messages.AddedShelf);
         }
 
+        [SecuredOperation("admin")]
         public IResult Delete(Shelf shelf)
         {
             var result = _shelfDal.GetAll(s => s.ShelfName == shelf.ShelfName);
@@ -49,6 +53,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ShelfDto>>(_shelfDal.GetShelfDetails());
         }
 
+        [SecuredOperation("admin,employee")]
         public IResult Update(Shelf shelf)
         {
             _shelfDal.Update(shelf);

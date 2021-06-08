@@ -63,7 +63,7 @@ namespace Business.Concrete
         }
 
         [CacheRemoveAspect("IProductUnitService.Get")]
-        [SecuredOperation("admin")]
+        [SecuredOperation("admin,employee")]
         public IResult Update(ProductUnit productUnit)
         {
             _productUnitDal.Update(productUnit);

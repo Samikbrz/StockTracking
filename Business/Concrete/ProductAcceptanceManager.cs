@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -17,12 +18,15 @@ namespace Business.Concrete
         {
             _productAcceptanceDal = productAcceptanceDal;
         }
+
+        [SecuredOperation("admin,empolyee")]
         public IResult Add(ProductAcceptance productAcceptance)
         {
             _productAcceptanceDal.Add(productAcceptance);
             return new SuccessResult(Messages.AddedProductAcceptance);
         }
 
+        [SecuredOperation("admin")]
         public IResult Delete(ProductAcceptance productAcceptance)
         {
             _productAcceptanceDal.Delete(productAcceptance);
@@ -44,6 +48,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ProductAcceptanceDto>>(_productAcceptanceDal.GetProductAcceptanceDetails(), Messages.ListedProductAcceptance);
         }
 
+        [SecuredOperation("admin,empolyee")]
         public IResult Update(ProductAcceptance productAcceptance)
         {
             _productAcceptanceDal.Update(productAcceptance);

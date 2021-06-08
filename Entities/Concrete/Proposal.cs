@@ -14,5 +14,6 @@ namespace Entities.Concrete
         public int CompanyId { get; set; }
         public int Count { get; set; }
         public int StockStoreId { get; set; }
+        public decimal ProposalPrice { get; set; }
     }
 }

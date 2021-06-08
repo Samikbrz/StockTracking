@@ -20,9 +20,7 @@ namespace DataAccess.Concrete.EntityFramework
                              join user in context.Users                            
                              on proposal.UserId equals user.Id
                              join company in context.Companies
-                             on proposal.CompanyId equals company.Id
-                             join stockstore in context.StockStores
-                             on proposal.StockStoreId equals stockstore.Id
+                             on proposal.CompanyId equals company.Id                            
                              select new ProposalDto
                              {
                                 Id = proposal.Id,
@@ -30,8 +28,9 @@ namespace DataAccess.Concrete.EntityFramework
                                 ProposalNo=proposal.ProposalNo,
                                 UserName=user.FirstName+" "+user.LastName,   
                                 CompanyName=company.CompanyName,
-                                Barcode=stockstore.Barcode,
-                                Count=proposal.Count
+                                Barcode=proposal.Barcode,
+                                Count=proposal.Count,
+                                ProposalPrice=proposal.ProposalPrice
                              };
                 return result.ToList();
             }

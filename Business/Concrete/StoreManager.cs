@@ -38,7 +38,7 @@ namespace Business.Concrete
             var result = _stockStoreDal.GetAll(s => s.StoreId == store.Id);
             if (result.Count>0)
             {
-                return new ErrorResult(Messages.StoreNotDeleted);
+                return new ErrorResult(Messages.StoreDoesNotDelete);
             }
             _storeDal.Delete(store);
             return new SuccessResult(Messages.DeletedStore);

@@ -14,14 +14,21 @@ namespace Business.Concrete
     public class ShelfManager : IShelfService
     {
         private IShelfDal _shelfDal;
-        public ShelfManager(IShelfDal shelfDal)
+        private IStockStoreDal _stockStoreDal;
+        public ShelfManager(IShelfDal shelfDal,IStockStoreDal stockStoreDal)
         {
             _shelfDal = shelfDal;
+            _stockStoreDal = stockStoreDal;
         }
 
         [SecuredOperation("admin")]
         public IResult Add(Shelf shelf)
         {
+            var result = _shelfDal.GetAll(s => s.ShelfName == shelf.ShelfName);
+            if (result.Count != 0)
+            {
+                return new ErrorResult(Messages.ShelfAlreadyExist);
+            }
             _shelfDal.Add(shelf);
             return new SuccessResult(Messages.AddedShelf);
         }
@@ -29,10 +36,10 @@ namespace Business.Concrete
         [SecuredOperation("admin")]
         public IResult Delete(Shelf shelf)
         {
-            var result = _shelfDal.GetAll(s => s.ShelfName == shelf.ShelfName);
+            var result = _stockStoreDal.GetAll(s => s.ShelfId == shelf.Id);
             if (result.Count!=0)
             {
-                return new ErrorResult(Messages.ShelfAlreadyExist);
+                return new ErrorResult(Messages.ShelfDoesNotDelete);
             }
             _shelfDal.Delete(shelf);
             return new SuccessResult(Messages.DeletedShelf);

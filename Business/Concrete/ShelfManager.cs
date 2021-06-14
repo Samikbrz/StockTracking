@@ -57,7 +57,7 @@ namespace Business.Concrete
 
         public IDataResult<List<ShelfDto>> GetDetail()
         {
-            return new SuccessDataResult<List<ShelfDto>>(_shelfDal.GetShelfDetails());
+            return new SuccessDataResult<List<ShelfDto>>(_shelfDal.GetShelfDetails(), Messages.ListedShelves);
         }
 
         [SecuredOperation("admin,employee")]

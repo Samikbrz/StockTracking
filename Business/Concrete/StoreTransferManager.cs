@@ -45,7 +45,7 @@ namespace Business.Concrete
 
         public IDataResult<List<StoreTransferDto>> GetDetail()
         {
-            return new SuccessDataResult<List<StoreTransferDto>>(_storeTransferDal.GetStoreTransferDetails());
+            return new SuccessDataResult<List<StoreTransferDto>>(_storeTransferDal.GetStoreTransferDetails(), Messages.ListedStoreTransfer);
         }
 
         [SecuredOperation("admin,employee")]

@@ -116,7 +116,8 @@ namespace Business.Constants
         public static string StoreAlreadyExist="Bu depo zaten mevcut";
 
         public static string BarcodeNotFound="Bu barkodda bir ürün bulunamadı!";
-        public static string StoreDoesNotDelete="Bu depoya bağlı ürünler var silemezsiniz!";
-        public static string ShelfDoesNotDelete= "Bu çekmeceye bağlı ürünler var silemezsiniz!";
+        public static string StoreDoesNotDeleted="Bu depoya bağlı ürünler var silemezsiniz!";
+        public static string ShelfDoesNotDeleted= "Bu rafa bağlı ürünler var silemezsiniz!";
+        public static string DrawerDoesNotDeleted = "Bu çekmeceye bağlı ürünler var silemezsiniz!";
     }
 }

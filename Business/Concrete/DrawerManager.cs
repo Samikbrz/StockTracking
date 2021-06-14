@@ -14,9 +14,11 @@ namespace Business.Concrete
     public class DrawerManager : IDrawerService
     {
         private IDrawerDal _drawerDal;
-        public DrawerManager(IDrawerDal drawerDal)
+        private IStockStoreDal _stockStoreDal;
+        public DrawerManager(IDrawerDal drawerDal,IStockStoreDal stockStoreDal)
         {
             _drawerDal = drawerDal;
+            _stockStoreDal = stockStoreDal;
         }
 
         [SecuredOperation("admin")]
@@ -34,6 +36,11 @@ namespace Business.Concrete
         [SecuredOperation("admin")]
         public IResult Delete(Drawer drawer)
         {
+            var result = _stockStoreDal.GetAll(d => d.DrawerId == drawer.Id);
+            if (result.Count!=0)
+            {
+                return new ErrorResult(Messages.DrawerDoesNotDeleted);
+            }
             _drawerDal.Delete(drawer);
             return new SuccessResult(Messages.DeletedDrawer);
         }

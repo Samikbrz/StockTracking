@@ -39,7 +39,7 @@ namespace Business.Concrete
             var result = _stockStoreDal.GetAll(s => s.ShelfId == shelf.Id);
             if (result.Count!=0)
             {
-                return new ErrorResult(Messages.ShelfDoesNotDelete);
+                return new ErrorResult(Messages.ShelfDoesNotDeleted);
             }
             _shelfDal.Delete(shelf);
             return new SuccessResult(Messages.DeletedShelf);

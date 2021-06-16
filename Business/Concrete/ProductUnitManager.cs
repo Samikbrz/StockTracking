@@ -21,10 +21,12 @@ namespace Business.Concrete
 {
     public class ProductUnitManager : IProductUnitService
     {
-        IProductUnitDal _productUnitDal;
-        public ProductUnitManager(IProductUnitDal productUnitDal)
+        private IProductUnitDal _productUnitDal;
+        private IStockStoreDal _stockStoreDal;
+        public ProductUnitManager(IProductUnitDal productUnitDal,IStockStoreDal stockStoreDal)
         {
             _productUnitDal = productUnitDal;
+            _stockStoreDal = stockStoreDal;
         }
         
         [ValidationAspect(typeof(ProductUnitValidator))]
@@ -46,6 +48,11 @@ namespace Business.Concrete
         [SecuredOperation("admin")]
         public IResult Delete(ProductUnit productUnit)
         {
+            var result = _stockStoreDal.Get(p => p.ProductUnitId == productUnit.Id);
+            if (result.Count!=0)
+            {
+                return new ErrorResult(Messages.ProductUnitDoesNotDeleted);
+            }
             _productUnitDal.Delete(productUnit);
             return new SuccessResult(Messages.DeletedProductUnit);
         }

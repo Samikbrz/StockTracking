@@ -119,5 +119,6 @@ namespace Business.Constants
         public static string StoreDoesNotDeleted="Bu depoya bağlı ürünler var silemezsiniz!";
         public static string ShelfDoesNotDeleted= "Bu rafa bağlı ürünler var silemezsiniz!";
         public static string DrawerDoesNotDeleted = "Bu çekmeceye bağlı ürünler var silemezsiniz!";
+        public static string ProductUnitDoesNotDeleted="Bu isime ait depoda ürün birimi var silemezsiniz!";
     }
 }

@@ -22,8 +22,7 @@ namespace DataAccess.Concrete.EntityFramework.Context
         public DbSet<Model> Models { get; set; }
         public DbSet<Shelf> Shelves { get; set; }
         public DbSet<ProductAcceptance> ProductAcceptances { get; set; }
-        public DbSet<ProductOutput> ProductOutputs { get; set; }
-        public DbSet<ExchangeRate> ExchangeRates { get; set; }
+        public DbSet<ProductOutput> ProductOutputs { get; set; }       
         public DbSet<StockStore> StockStores { get; set; }
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<StockKind> StockKinds { get; set; }

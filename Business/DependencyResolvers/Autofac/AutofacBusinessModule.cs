@@ -29,10 +29,7 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<EfCompanyDal>().As<ICompanyDal>().SingleInstance();
 
             builder.RegisterType<DrawerManager>().As<IDrawerService>().SingleInstance();
-            builder.RegisterType<EfDrawerDal>().As<IDrawerDal>().SingleInstance();
-
-            builder.RegisterType<ExchangeRateManager>().As<IExchangeRateService>().SingleInstance();
-            builder.RegisterType<EfExchangeRateDal>().As<IExchangeRateDal>().SingleInstance();
+            builder.RegisterType<EfDrawerDal>().As<IDrawerDal>().SingleInstance();            
 
             builder.RegisterType<ModelManager>().As<IModelService>().SingleInstance();
             builder.RegisterType<EfModelDal>().As<IModelDal>().SingleInstance();
